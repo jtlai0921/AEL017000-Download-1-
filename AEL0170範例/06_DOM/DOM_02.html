@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+
+    原本只有A與B兩個文字項目，<br />
+    後面的JavaScript程式動態加入第三個項目：C。
+
+    <!-- HTML Markup for VenueList -->
+    <ul id="VenueList">
+        <li>Room A</li>
+        <li>Room B</li>
+    </ul>
+
+
+
+    <!-- **********************************************************  -->
+    <script type="text/javascript">
+        // JavaScript先抓取文字清單元素<ul>
+        var list = document.getElementById("VenueList");
+
+        // 在<ul>底下，產生一個新的文字項目 <li>
+        var newItem = document.createElement("li");
+              newItem.textContent = "Room C";  //設定文字內容
+
+        list.appendChild(newItem);  // 在<ul>裡面，動態加入這個新的<li>
+           
+    </script>
+
+
+</body>
+</html>

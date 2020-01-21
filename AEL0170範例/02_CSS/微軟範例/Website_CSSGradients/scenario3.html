@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<!-- Copyright © Microsoft Corporation. All rights reserved. -->
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Internet Explorer Developer Sample</title>
+    <link rel="stylesheet" type="text/css" href="css/base-sdk.css" />
+    <link rel="stylesheet" type="text/css" href="css/scenario3.css" />
+    <script type="text/javascript" src="script/base-sdk.js"></script>
+</head>
+<body role="application">
+    <div id="header" role="contentinfo"></div>
+
+    <!--Sample title-->
+    <h1 id="sampleTitle">CSS Gradients</h1>
+
+    <h2>Scenario 3: Repeating gradients</h2>
+    <p>
+        <a href="default.html">Back to scenarios menu</a>
+    </p>
+
+    <div class="descRegion" role="region" aria-labelledby="descLabel" aria-live="assertive">
+        <h2 class="descLabel">Description</h2>
+        <div class="descContent">
+
+        <!--Description and code snippet-->
+        <p>
+            This code sample demonstrates the syntax for repeating linear and radial gradients
+            on <a href="http://msdn.microsoft.com/en-us/ie/aa740471">
+            Internet Explorer 10 Release Preview</a> and higher.
+        </p>
+        <p>
+            For syntax that is supported on earlier versions of Internet Explorer 10 and other browsers, refer to the scenario3.css file.
+        </p>
+        <h2 class="codeLabel">Code</h2>
+<pre>
+#twoStops
+{
+    background-image: repeating-linear-gradient(to bottom right,
+                                                #FFFFFF 30px, #00A3EF 60px);
+}
+#threeStops
+{
+    background-image: repeating-radial-gradient(ellipse farthest-corner at center,
+                                                #FFFFFF 30px, #00A3EF 60px);
+}
+#fourStops
+{
+    background-image: repeating-radial-gradient(circle farthest-corner at center,
+                                                #FFFFFF 30px, #00A3EF 60px);
+}
+</pre>
+        </div>
+    </div>
+
+    <!--Rendered result-->
+    <div class="resultRegion" role="region" aria-labelledby="resultLabel" aria-live="assertive">
+        <h2 class="resultLabel">Result</h2>
+    
+        <div class="resultContent">
+            <div id="repeatingLinear"></div>
+            <div id="repeatingCircle"></div>
+            <div id="repeatingEllipse"></div>
+        </div>
+    </div>
+
+    <div id="footer" role="contentinfo"></div>
+</body>
+</html>

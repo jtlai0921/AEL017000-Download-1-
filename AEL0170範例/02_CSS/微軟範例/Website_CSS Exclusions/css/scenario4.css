@@ -1,0 +1,20 @@
+﻿/* -- Copyright © Microsoft Corporation. All rights reserved. */
+#container
+{
+    /*The parent container must be set to postion: relative because position:
+    absolute elements, such as the figure, only position themselves relative to
+    the nearest non-static ancestor element*/
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+}
+#figure
+{
+    /*This code specifies the element as an exclusion and allows content to flow on all sides if it. */
+    -ms-wrap-flow: both;
+     position: absolute;
+     top: 100px;
+     left: 100px;
+     height: 10em;
+}

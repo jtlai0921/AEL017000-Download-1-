@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>運算子的綜合練習題</title>
+
+    <script type="text/javascript">
+
+        var zero = 0;
+        var emptyString = "";
+        var falseVar = false;
+
+        zero == falseVar;    // returns true;
+        zero === falseVar;   // returns false; 代表資料型態不同。
+
+        emptyString == false;   // returns true; 
+        emptyString === false;   // returns false; 代表資料型態不同。
+
+
+
+        document.write("zero == falseVar;答案是：" + (zero == falseVar));
+        document.write("<br />zero === falseVar;答案是：" + (zero === falseVar));
+
+        document.write("<hr />emptyString == false;答案是：" + (emptyString == false));
+        document.write("<br />emptyString === false;答案是：" + (emptyString === false));
+        // 於瀏覽器視窗內直接顯示
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

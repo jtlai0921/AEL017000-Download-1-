@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+
+    <script type="text/javascript">
+
+        function myFunction() {
+            var n = document.getElementsByTagName("H1")[0];
+
+            var a = n.getAttributeNode("style");
+            n.removeAttributeNode(a);
+
+            //也可以寫成這樣：
+            //document.getElementsByTagName("H1")[0].removeAttribute("style");
+        };
+
+    </script>
+</head>
+<body>
+
+    <h1 style="color:red">Hello World</h1>
+    
+    <button onclick="myFunction()">按下按鈕，上面的文字會失去style屬性（紅色會消失）</button>
+
+    <!-- 資料來源：http://www.w3schools.com/jsref/met_element_removeattributenode.asp -->
+
+
+</body>
+</html>

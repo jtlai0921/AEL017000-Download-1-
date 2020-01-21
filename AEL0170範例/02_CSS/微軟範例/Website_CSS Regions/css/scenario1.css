@@ -1,0 +1,12 @@
+﻿/* -- Copyright © Microsoft Corporation. All rights reserved. */
+.content-source {
+ -ms-flow-into: content;
+}
+
+.s1-region {
+ -ms-flow-from: content;
+
+ width: 300px;
+ height: 150px;
+ border: 1px solid #ccc;
+}

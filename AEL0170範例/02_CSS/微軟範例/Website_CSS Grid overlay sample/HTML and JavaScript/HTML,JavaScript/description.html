@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,0:header,0:SearchBox,1:IeImageSprite;/Areas/Epx/Themes/Metro/Content:0,/Areas/Epx/Themes/Ie/Content:1&amp;amp;hashKey=5084F564E9533D332F572B0B2D5C40D4" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/Combined.css,0:footer,1:IeImageSprite;/Areas/Epx/Themes/Metro/Content:0,/Areas/Epx/Themes/Ie/Content:1&amp;amp;hashKey=6A36A7B96AEBC3A894ACAE507D7E3777" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>CSS Grid overlay sample</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" /><link href="description/4cb13e33-70e6-47d1-a876-48bcbfa5e287Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>CSS Grid overlay sample</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            CSS3, Internet Explorer 10
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            CSS Grid, Webpage layout
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Web
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary Language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Last Updated</label>
+                    <div id="LastUpdated">12/19/2012</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/ie/Grid-overlay-b183a5a8">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy Code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<div><a href="http://samples.msdn.microsoft.com/iedevcenter/Grid/default.html" style="text-decoration:none">
+<div style="background:#ff8c00; color:white; width:100px; padding:5px 15px; margin:15px 0; line-height:135%; font-family:inherit; font-size:1.1em; text-decoration:none">
+View sample</div>
+</a></div>
+<h1><span style="font-size:20px; font-weight:bold">Description</span></h1>
+<p>CSS Grid enables you to create webpages with&nbsp;a layout where the elements&nbsp;overlap and respond to changing window size, without requiring complicated pixel calculation.&nbsp;For example, it simplifies&nbsp;writing a webpage with a layout&nbsp;that
+ includes titles or captions&nbsp;over a set of images that can adapt to different aspect ratios or screen sizes.</p>
+<p>The <strong>Creating an overlay with the CSS grid</strong> example demonstrates the basics of putting text over an image using only a few lines of CSS and HTML.&nbsp;</p>
+<p><br>
+The <strong>Adapting to different size</strong>s example can help you expand your webpage&rsquo;s capabilities by showing how to resize your image and the CSS grid. The example shows an image in its original size, as well as a smaller and larger version, all
+ with a text overlay that shows more or less information based on the size of the image.</p>
+<p><br>
+The <strong>Adapting to different positions</strong> example shows how change the position of the text that you overlay on an image.&nbsp; The example shows how to position text at the top, middle, or bottom of an image to provide flexibility to your page&rsquo;s
+ design. <em><br>
+</em></p>
+<h1>See also</h1>
+<p><strong>Reference</strong><br>
+<a href="http://msdn.microsoft.com/en-us/library/ie/hh772052(v=vs.85).aspx" >CSS Grid Alignment</a><br>
+<br>
+<strong>Conceptual</strong><br>
+<a href="http://msdn.microsoft.com/en-us/library/ie/hh673533(v=vs.85).aspx" >Internet Explorer 10 Developer Guide: CSS Grid alignment</a><br>
+<br>
+<strong>Internet Explorer Test Drive</strong><br>
+<a href="http://ie.microsoft.com/testdrive/Graphics/hands-on-css3/hands-on_grid.htm" >Hands On: CSS3 Grid Layout</a><br>
+<a href="http://ie.microsoft.com/testdrive/HTML5/GridSystem/Default.html" >The Grid System</a><br>
+<a href="http://ie.microsoft.com/testdrive/HTML5/Griddle/Default.html#popular" >Gridddle</a><br>
+<br>
+<strong>Internet Explorer Testing Center</strong><br>
+<a href="http://samples.msdn.microsoft.com/ietestcenter/#css3grid" >CSS Grid Layout</a><br>
+<br>
+</p>
+<h1>Further information</h1>
+<p>The Internet Explorer Samples Gallery contains a variety of code samples that demonstrate new features available in Internet Explorer. These downloadable samples are provided as compressed ZIP files that contain the HTML, JavaScript, CSS, and image resources
+ for the sample, along with the license agreement and sample description metadata. After you&rsquo;ve downloaded and unzipped the compressed files, the sample files can be found in the following location:</p>
+<p style="padding-left:30px">(unzipped folder)\HTML,JavaScript\Website \<strong>(Sample)</strong></p>
+<p>This sample is provided as-is in order to indicate or demonstrate the functionality of the feature APIs for Internet Explorer&nbsp;10. We appreciate your comments and questions on this sample!</p>
+<p>For download info, visit <a href="http://msdn.microsoft.com/en-us/ie/aa740471.aspx">
+Internet Explorer downloads</a>.</p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

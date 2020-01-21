@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script>
+        function cancel(e) {
+            if (e.preventDefault) {
+                e.preventDefault();
+            }
+            return false;
+        }
+
+        var drop = document.querySelector('#drop');
+
+        // Tells the browser that we *can* drop on this target
+        addEvent(drop, 'dragover', cancel);
+        addEvent(drop, 'dragenter', cancel);
+
+        addEvent(drop, 'drop', function (e) {
+            if (e.preventDefault) e.preventDefault(); // stops the browser from redirecting off to the text.
+
+            this.innerHTML += '<p>' + e.dataTransfer.getData('Text') + '</p>';
+            return false;
+        });
+    </script>
+
+    <style>
+        #drop {
+            min-height: 400px;
+            width: 600px;
+            border: 3px dashed #ccc;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        p {
+            margin: 3px 0;
+        }
+    </style>
+
+</head>
+<body>
+
+    <img src="images/Tim.jpg" alt="Tim" />
+    <br /><br />
+
+
+    <div id="drop"></div>
+
+    <!-- 請用 Chrome瀏覽器來觀賞 -->
+    <!--資料來源：  http://html5doctor.com/native-drag-and-drop/ -->
+    <!--   http://jsbin.com/ezuke/2498/edit -->
+</body>
+
+</html>

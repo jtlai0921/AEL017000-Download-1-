@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>傳統HTML的按鈕</title>
+
+    <script type="text/javascript" src="Scripts/jquery-1.8.2.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#Button1").click(function () {
+                $("h2").css("color", "red");
+            });
+        });
+
+    </script>
+</head>
+<body>
+
+    這是一個簡單的 jQuery語法練習。<br /><br />
+    <hr />
+
+    <h2>MIS2000 Lab.</h2>
+    <h2>簡單的 jQuery語法練習。</h2>
+    <br />
+    <br />
+    
+
+    <br /><br />傳統HTML的按鈕：
+    <input type="button" id="Button1" value="傳統HTML按鈕，改變標題的顏色" />
+
+</body>
+</html>

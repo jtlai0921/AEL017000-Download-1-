@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+
+    <style>
+        input:focus {
+            background-color: yellow;
+        }
+
+        input:hover {
+            background-color: greenyellow;
+            /* 滑鼠指標經過 */
+        }
+
+        input:checked {
+            background-color: red;
+            /* 只有Opera瀏覽器有效果 */
+            /* 請參閱這個網站並觀看效果 http://www.w3schools.com/cssref/tryit.asp?filename=trycss3_checked  */
+        }
+    </style>
+
+</head>
+<body>
+
+    <p>填寫時，TextBox底色變成黃色（滑鼠請移開，不要一直指向這裡）</p>
+    <p>滑鼠經過時，TextBox底色變成淺綠色</p>
+
+    <form>
+        First name: <input type="text" name="firstname" /><br /><br />
+        Last name: <input type="text" name="lastname" /><br /><br />
+
+        請勾選：<input type="checkbox" />
+    </form>
+
+    <p><b>Note:</b> For <b>:focus</b> to work in IE8, a DOCTYPE must be declared.</p>
+
+    <br /><br />
+
+    
+        <!--範例來源：http://www.w3schools.com/cssref/tryit.asp?filename=trycss_sel_focus -->
+    
+
+</body>
+</html>

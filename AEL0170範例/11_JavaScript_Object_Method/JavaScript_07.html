@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+
+    <script>
+        // Create a user-defined object.
+        var obj = {};
+
+        // Add a data property to the object.
+        Object.defineProperty(obj, "newDataProperty", {
+            value: 101,
+            writable: true,
+            enumerable: true,
+            configurable: true
+        });
+
+        obj.newDataProperty = 102;   // 設定屬性的值。
+
+        document.write("Property value: " + obj.newDataProperty + "<br />");
+        // 執行成果： Property value: 102
+
+        //---- 下面程式會列出屬性的值。----
+        var names = Object.getOwnPropertyNames(obj);
+
+        for (var i = 0; i < names.length; i++) {
+            var prop = names[i];
+            document.write(prop + ': ' + obj[prop] + "<br />");
+        }
+        // 執行成果： newDataProperty: 102
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

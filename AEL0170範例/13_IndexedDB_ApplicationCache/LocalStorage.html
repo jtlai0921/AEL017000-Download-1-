@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            border-collapse: collapse;
+            border: 1px solid #000080;
+            background-color: #66FFFF;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div><label>索引 ID -- </label><input id="myId" placeholder="重複輸入相同的，不算！" /></div>
+    <div><label>數值 Value -- </label><input id="myValue" /></div>
+
+    <div id="buttons">
+        <button id="button1_add">加入</button>
+        <button id="button2_clear">清除</button>
+    </div>
+    <p id="countmsg">共有 <span id="count"></span>筆記錄在 localStorage裡面。</p>
+
+
+    <table id="table1" border="1" class="auto-style1" style="width: 100%">
+        <tr>
+            <th>索引 ID</th>
+            <td>數值 Value</td>
+        </tr>
+    </table>
+
+
+
+    <script>
+    displayData();
+
+    var buttons = document.getElementsByTagName("button");
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].onclick = handleButtonPress;
+    }
+
+    function handleButtonPress(e) {
+        switch (e.target.id) {
+            case 'button1_add':
+                var key = document.getElementById("myId").value;
+                var value = document.getElementById("myValue").value;
+                localStorage.setItem(key, value);    //****************
+                break;
+
+            case 'button2_clear':
+                localStorage.clear();    //****************
+                break;
+        }
+        displayData();
+    }
+
+    function displayData() {
+        var tableElem = document.getElementById("table1");
+        tableElem.innerHTML = "";    //不清空的話，下次新增資料會重複出現
+
+        var itemCount = localStorage.length;
+        document.getElementById("count").innerHTML = itemCount;
+
+        for (var i = 0; i < itemCount; i++) {
+            var LS_key = localStorage.key(i);
+            var LS_value = localStorage[LS_key];
+            tableElem.innerHTML += "<tr><th><h3>" + LS_key + ":</h3></th>" + "<td><h3>" + LS_value + "</h3></td></tr>";
+        }
+    }
+    </script>
+
+</body>
+</html>

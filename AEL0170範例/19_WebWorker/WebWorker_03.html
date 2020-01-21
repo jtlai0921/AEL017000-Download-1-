@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+
+資料來源：http://www.w3schools.com/html/html5_webworkers.asp
+    <br /><br />
+
+    這個數字會不斷在背景運算：<h1 id="result" style="color:red"></h1>
+
+    <button onclick="startWorker()">開始！</button>
+    <button onclick="stopWorker()">結束，.terminate()方法</button>
+    <br><br>
+
+    <script>
+        var ww;
+
+        function startWorker() {
+            if (typeof (Worker) !== "undefined") {  // 請先檢查瀏覽器是否支援Web Worker？Worker物件存在否？
+                if (typeof (ww) == "undefined") {
+                    ww = new Worker("demo_workers.js");
+                }
+                ww.onmessage = function (event) {
+                    document.getElementById("result").innerHTML = event.data;
+                };
+            } else {
+                document.getElementById("result").innerHTML = "***抱歉，您的瀏覽器不支援Web Workers***";
+            }
+        }
+
+        function stopWorker() {
+            ww.terminate();
+            ww = undefined;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>解釋「Hoisting的意義」</title>
+
+    <script>
+        var a = 1;    //全域變數
+
+        function test() {
+            if (!a) {
+                var a = 2;    //您以為是「區域」變數，與外面「同名的」全域變數不相關，對嗎？此為Scoping的觀念。
+            }
+            window.alert("變數a : " + a);
+
+            // 因為JavaScript的 Hoisting與Scoping特性，
+            // 所以JavaScript會把 a 這個變數當成在function的「第一列」宣告(建立)的變數來用
+            // 如同在 function裡面的第一列，重新宣告 --
+            //********************
+            //  var a;
+            //********************
+            //if (!a) {
+            //    var a = 2;
+            //}
+            //window.alert("變數a : " + a);
+        }
+
+        //--------------------------------
+        //--上面是程式，底下是第一次呼叫這個 function。
+        test();
+    </script>
+
+</head>
+<body>
+
+
+    <!-- 解釋「Hoisting的意義」 -->
+
+    <!-- 範例來源：http://www.puritys.me/docs-blog/article-242-Javascript-Hoisting-%E8%88%87-Closure.html  -->
+</body>
+</html>

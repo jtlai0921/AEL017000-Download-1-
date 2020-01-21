@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!-- Copyright © Microsoft Corporation. All rights reserved. -->
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Internet Explorer Developer Sample</title>
+    <link rel="stylesheet" type="text/css" href="css/base-sdk.css" />
+    <link rel="stylesheet" type="text/css" href="css/scenario1.css" />
+    <script type="text/javascript" src="script/base-sdk.js"></script>
+</head>
+<body role="application">
+    <div id="header" role="contentinfo"></div>
+
+    <h1 id="sampleTitle">CSS Exclusions</h1>
+
+    <!--Sample title-->
+    <h2>Scenario 1: Exclusion placed in normal flow</h2>
+    <p>
+        <a href="default.html">Back to scenarios menu</a>
+    </p>
+
+    <!--Description and code snippet-->
+    <div class="descRegion" role="region" aria-labelledby="descLabel" aria-live="assertive">
+        <h3 id="descLabel">Description</h3>
+        <div class="descContent">
+            <p>
+                This code demonstrates how a exclusion can be absolutely positioned
+                relative to a container, and how inline content within that container (for
+                instance, text) will then wrap around the exclusion. Note that the
+                absolutely positioned element positions itself relative to its nearest
+                non-statically positioned ancestor, so the parent container in this case must
+                be set to position: relative, rather than the default position: static.
+            </p>
+            <h3 class="codeLabel">Code</h3>
+<pre>
+#container
+{
+    /*The parent container must be set to 'postion:relative' because 'position:absolute'
+    elements, such as the figure, only position themselves relative to the nearest
+    non-static ancestor element*/
+    position: relative;
+    
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    
+    /*This code activates full justification and hyphenation for text, which is
+    recommended for text intersecting with exclusions*/
+    -ms-hyphens: auto;
+    text-align: justify;
+}
+#figure
+{
+    /*This code specifies the element as an exclusion and allows content to
+    flow on all sides if it. */
+    -ms-wrap-flow: both;
+
+    position: absolute;
+    top: 3em;
+    left: 15em;
+    margin: 5px;
+    height: 10em;
+}
+</pre>
+        </div>
+    </div>
+
+    <!--Rendered result-->
+    <div class="resultRegion" role="region" aria-labelledby="resultLabel" aria-live="assertive">
+        <h3 id="resultLabel">Result</h3>
+        <div class="resultContent">
+            <div id="container">
+                <img id="figure" src="images/windows.jpg" />
+                <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="footer" role="contentinfo"></div>
+</body>
+</html>

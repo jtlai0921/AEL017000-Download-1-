@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+
+    <script src="Scripts/jquery-1.8.2.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            alert("抓到HTML標籤的內容--" + $("h1").html());
+            //抓取 <h1>原本的內容。因為數量很多，只抓第一個<h1>。
+
+            $("h1").html("<font color=red>修改後的內容</font>");
+            // 抓取與設定元素的HTML內容。
+        });
+    </script>
+
+</head>
+<body>
+
+    <h1>第一個標題文字</h1>
+    <h1>第二個標題文字</h1>
+    <h1>第三個標題文字</h1>
+
+    <!--請參閱 jQuery官方網站的解說： http://api.jquery.com/category/manipulation/ -->
+</body>
+</html>

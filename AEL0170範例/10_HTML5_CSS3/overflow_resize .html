@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style type="text/css">
+        p {
+            overflow: hidden;
+            resize: horizontal; /*水平、寬度可以ReSize*/
+            min-width: 40px;
+            max-width: 80px;
+
+            background: #b6ff00;
+        }
+
+        div {
+            overflow: hidden;
+            resize: vertical; /*垂直、高度可以ReSize*/
+            min-height: 30px;
+            max-height: 70px;
+            background: #0094ff;
+        }
+    </style>
+</head>
+<body>
+    <h3>resize</h3>
+    <p>
+        太陽花與香蕉。太陽花與香蕉。太陽花與香蕉。太陽花與香蕉。<br />
+        ABC12345678。ABC12345678。ABC12345678。ABC12345678。<br />
+    </p><h3>雖然寬度可以Resize，但被限制在max-width: 80px;（最大值）</h3><br />
+
+    <div>
+        1.民主與法治。民主與法治。民主與法治。民主與法治。民主與法治。<br />
+        2.民主與法治。民主與法治。民主與法治。民主與法治。民主與法治。<br />
+        3.民主與法治。民主與法治。民主與法治。民主與法治。民主與法治。<br />
+        4.民主與法治。民主與法治。民主與法治。民主與法治。民主與法治。<br />
+        5.民主與法治。民主與法治。民主與法治。民主與法治。民主與法治。<br />
+        6.民主與法治。民主與法治。民主與法治。民主與法治。民主與法治。<br />
+    </div>
+    <h3>雖然高度可以Resize，但被限制在max-height: 70px;（最大值）。導致六列文字無法全部出現</h3>
+
+</body>
+</html>

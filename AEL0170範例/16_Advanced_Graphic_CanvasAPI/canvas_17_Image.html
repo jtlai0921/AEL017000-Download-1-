@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>中空字體</title>
+</head>
+<body>
+
+    原本的圖片：<img id="Img1" src="wales.png">
+    <br /><br />
+    <hr />
+    <br />
+
+    Canvas與.drawImage()方法：<br />
+    <canvas id="myCanvas" style="border:1px solid #d3d3d3;">
+        抱歉！瀏覽器不支援HTML5 canvas。<br />No canvas support in this browser
+    </canvas>
+
+
+    <!-- Script放在上方就無法運作。請注意！ -->
+    <script>
+            var canvas = document.getElementById("myCanvas");
+            var context = canvas.getContext("2d");
+
+            var img = document.getElementById("Img1");
+            context.drawImage(img, 10, 10);
+
+    </script>
+
+    <!-- 資料來源：http://www.w3schools.com/html/html5_canvas.asp -->
+
+</body>
+</html>

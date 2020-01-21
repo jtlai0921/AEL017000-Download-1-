@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+
+    無外框線：<br />
+    <svg>
+        <rect width="300" height="100" style="fill:rgb(0,0,255)" />
+    </svg>
+
+    有外框線（stroke），加上透明度（opacity）：<br />
+    <svg>
+        <rect x="50" y="20" width="150" height="150"
+              style="fill:blue;fill-opacity:0.1;  stroke:pink;stroke-width:5;stroke-opacity:0.9" />
+    </svg>
+    <!-- 以上的參考資料：http://www.w3schools.com/svg/svg_rect.asp  -->
+
+
+    <br /><br /><br /><br /><br />
+    兩個方形重疊：（rx與ry代表圓角）<br />
+    <svg xmlns="http://www.w3.org/2000/svg">
+        <rect x="70" y="70" width="100" height="75" rx="20" ry="20" fill="red" stroke="blue" />
+        <rect x="95" y="95" width="100" height="75" fill="yellow" stroke="blue" />
+    </svg>
+
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+﻿/* -- Copyright © Microsoft Corporation. All rights reserved. */
+
+#scenario4Output input:required:invalid, #scenario4Output input:optional:invalid
+{
+    border:solid #FF0033;
+}

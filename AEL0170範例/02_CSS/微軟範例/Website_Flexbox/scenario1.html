@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- Copyright © Microsoft Corporation. All rights reserved. -->
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Internet Explorer Developer Sample</title>
+    <link rel="stylesheet" type="text/css" href="css/base-sdk.css" />
+    <link rel="stylesheet" type="text/css" href="css/scenario1.css" />
+    <script type="text/javascript" src="script/base-sdk.js"></script>
+</head>
+<body role="application">
+    <div id="header" role="contentinfo"></div>
+
+    <h1 id="sampleTitle">CSS Flexbox</h1>
+
+    <!--Sample title-->
+    <h2>Scenario 1: Flexbox toolbar</h2>
+    <p>
+        <a href="default.html">Back to scenarios menu</a>
+    </p>
+
+    <!--Description and code snippet-->
+    <div class="descRegion" role="region" aria-labelledby="descLabel" aria-live="assertive">
+        <h3 id="descLabel">Description</h3>
+        <div class="descContent">
+            <p>
+                This code demonstrates how Flexbox can be used to create a simple menu or
+                toolbar within an application that resizes according to the application layout.
+                To demonstrate, please resize the browser window width. The code below shows
+                how the toolbar has a minimum size when the browser window is at 300px, and
+                a maximum size when the browser window is at 650px. In between these sizes,
+                the buttons grow and add space between themselves. The toolbar also lays
+                itself out differently when the browser window is placed in portrait mode
+                (window height > window width).
+            </p>
+            <h3 class="codeLabel">Code</h3>
+<pre>
+#toolbar
+{
+    height: 50px;
+    border: 1px solid black;
+
+    /* Specifies that the toolbar contents will be laid out according to Flexbox rules. */
+    display: flex;
+
+    /* Specifies that any excess space that does not go to flexible children will be evenly distributed between them*/
+    justify-content: space-between
+
+    /* Ensures that the toolbar will not expand beyond 650 pixels */
+    max-width: 650px;
+
+    /* Ensures that the toolbar will not shrink beyond 300 pixels */
+    min-width: 300px;
+
+    /*styling rules*/
+    background-color: #115511;
+    border-radius: 10px;
+}
+</pre>
+        </div>
+    </div>
+
+    <!--Rendered result-->
+    <div class="resultRegion" role="region" aria-labelledby="resultLabel" aria-live="assertive">
+        <h3 id="resultLabel">Result</h3>
+        <div class="resultContent">
+            <div id="toolbar">
+                <button class="appButton" id="buttonReverse">Reverse</button>
+                <button class="appButton" id="buttonPlay">Play</button>
+                <button class="appButton" id="buttonForward">Forward</button>
+
+                <!-- The buttonGroup div is used to create a grouping of smaller buttons -->
+                <div id="buttonGroup">
+                    <button class="appButton" id="buttonVolPlus">Vol +</button>
+                    <button class="appButton" id="buttonVolMinus">Vol -</button>
+                </div>    
+            </div>
+        </div>
+    </div>
+    <div id="footer" role="contentinfo"></div>
+</body>
+</html>

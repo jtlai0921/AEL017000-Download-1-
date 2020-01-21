@@ -1,0 +1,37 @@
+﻿/* -- Copyright © Microsoft Corporation. All rights reserved. */
+#scenario3Container
+{
+    /*This CSS rule defines that there will be 3 columns of varying width,
+    regardless of the size of the container*/
+    column-count: 3;
+
+    /*This CSS rule defines a gap between columns of 20px, and a 1px-wide
+    solid black column rule between columns. Note that the column rule width
+    does not impact the size of the column gap*/
+    column-gap: 20px;
+    column-rule: 1px solid black;
+
+    /*This CSS rule defines that text in each column should be fully
+    justified, and hyphens should be automatically inserted into words
+    when needed. Note that this approach is generally recommended with
+    narrow columns*/
+    -ms-hyphens: auto;
+    text-align: justify;
+
+    /*CSS rules to control the flow behavior of text and make it easier to
+    observe column break behavior*/
+    height: 300px;
+    column-fill: auto;
+}
+#scenario3Paragraph1
+{
+    /*CSS rules ensure a column break will always occur after the red paragraph*/
+    break-after: column;
+    color: red;
+}
+#scenario3Paragraph3
+{
+    /*CSS rules ensures a column break will be avoided inside the blue paragraph*/
+    break-inside: avoid;
+    color: blue;
+}

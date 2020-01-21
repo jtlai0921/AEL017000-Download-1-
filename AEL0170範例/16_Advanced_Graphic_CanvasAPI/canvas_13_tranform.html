@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+
+    <canvas id="myCanvas" style="border:1px solid #d3d3d3;" width="350" height="400">
+        抱歉！瀏覽器不支援HTML5 canvas。<br />No canvas support in this browser
+    </canvas>
+
+
+    <!-- Script放在上方就無法運作。請注意！ -->
+    <script>
+            var canvas = document.getElementById("myCanvas");
+            var context = canvas.getContext("2d");
+
+            context.fillStyle = "orange";
+            context.fillRect(0, 0, 250, 100)
+
+            context.transform(1, 0.5, -0.5, 1, 30, 10);  //***重點***
+            // transform(scaleX, skewX,   scaleY, skewY,   translateX, translateY)
+            // 三個參數：縮放、傾斜與轉譯
+
+            context.fillStyle = "red";
+            context.fillRect(0, 0, 250, 100);
+
+            context.transform(1, 0.5, -0.5, 1, 30, 10);  //***重點***
+
+            context.fillStyle = "green";
+            context.fillRect(0, 0, 250, 100);
+    </script>
+
+    <!-- 資料來源：http://www.w3schools.com/tags/canvas_transform.asp -->
+
+</body>
+</html>

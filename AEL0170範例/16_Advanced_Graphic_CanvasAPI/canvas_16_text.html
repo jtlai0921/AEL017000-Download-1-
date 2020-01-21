@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>中空字體</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="450" style="border:1px solid #d3d3d3;">
+        抱歉！瀏覽器不支援HTML5 canvas。<br />No canvas support in this browser
+    </canvas>
+
+
+    <!-- Script放在上方就無法運作。請注意！ -->
+    <script>
+            var canvas = document.getElementById("myCanvas");
+            var context = canvas.getContext("2d");
+
+            context.font = "30px Arial";
+            context.strokeText("Hello World，中空字體", 10, 50);
+
+    </script>
+
+    <!-- 資料來源：http://www.w3schools.com/html/html5_canvas.asp -->
+
+</body>
+</html>

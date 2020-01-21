@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>下拉式選單</title>
+</head>
+<body>
+
+    HTML以前的下拉式選單：<br />
+
+    <select id="carID" name="carNAME">
+            <option value="bmw">BMW</option>
+            <option value="benz" selected>M.BenZ</option>
+            <option value="tesla">Tesla</option>
+            <option value="ford">Ford</option>
+    </select>
+
+
+    <hr />
+
+    HTML5多了一個子選項的群組（optgroup）<br />
+
+    <select id="carID2" name="carNAME2">
+        <optgroup label="歐規車種">
+            <option value="bmw">BMW</option>
+            <option value="benz">M.BenZ</option>
+        </optgroup>
+
+        <optgroup label="美規車種">
+            <option value="tesla">Tesla</option>
+            <option value="ford">Ford</option>
+        </optgroup>
+    </select>
+
+
+</body>
+</html>

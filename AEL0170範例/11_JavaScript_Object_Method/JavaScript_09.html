@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>範例三，加入存取子屬性。</title>
+
+    <script>
+        // Create a user-defined object.
+        var obj = {};
+
+        // Add an accessor property to the object.
+        Object.defineProperty(obj, "newAccessorProperty", {
+            set: function (x) {
+                document.write("in property set accessor" + "<br />");
+                this.newaccpropvalue = x;
+            },
+            get: function () {
+                document.write("in property get accessor" + "<br />");
+                return this.newaccpropvalue;
+            },
+            enumerable: true,
+            configurable: true
+        });
+
+        obj.newAccessorProperty = 30;   // 設定屬性的值。
+        document.write("Property value: " + obj.newAccessorProperty + "<br />");
+        // 執行成果： 
+        // in property set accessor
+        // in property get accessor
+        // Property value: 30
+
+
+        //---- 下面程式會列出屬性的值。----
+        var names = Object.getOwnPropertyNames(obj);
+
+        for (var i = 0; i < names.length; i++) {
+            var prop = names[i];
+            document.write(prop + ': ' + obj[prop] + "<br />");
+        }
+        // 執行成果： 
+        // in property get accessor
+        // newAccessorProperty: 30
+
+    </script>
+
+</head>
+<body>
+
+    <h3>範例三，加入存取子屬性。</h3>
+
+</body>
+</html>

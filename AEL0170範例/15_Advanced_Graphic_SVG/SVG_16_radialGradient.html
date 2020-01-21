@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>radialGradient</title>
+</head>
+<body>
+    radialGradient <br /><br />
+
+    <!-- 微軟教科書範例（不會動作，需修改三個地方） -->
+    <svg xmlns="http://www.w3.org/2000/svg">
+        <radialGradient id="gradient0" fx="0.3" fy="0.3">
+            <stop offset="0.1" stop-color="yellow" />
+            <stop offset="0.7" stop-color="red" />
+        </radialGradient>
+
+        <ellipse cx="200" cy="70" rx="85" ry="55" fill="url(#gradient0)" />
+    </svg>
+
+
+    <hr />
+    <!-- W3Schools範例，OK！ -->
+
+    <svg height="150" width="500">
+        <defs>
+            <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                <stop offset="0%" style="stop-color:rgb(255,255,255)" />
+                <stop offset="100%" style="stop-color:rgb(0,0,255)" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="200" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+    </svg>
+
+    <svg height="150" width="500">
+        <defs>
+            <radialGradient id="grad2" cx="20%" cy="30%" r="30%" fx="50%" fy="50%">
+                <stop offset="0%" style="stop-color:rgb(255,255,255);stop-opacity:0" />
+                <stop offset="100%" style="stop-color:rgb(0,0,255);stop-opacity:1" />
+            </radialGradient>
+        </defs>
+        <ellipse cx="200" cy="70" rx="85" ry="55" fill="url(#grad2)" />
+    </svg>
+
+
+</body>
+</html>

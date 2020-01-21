@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>「禁用」預設的行為以免產生誤判或造成困擾。</title>
+</head>
+<body>
+    「禁用」預設的行為以免產生誤判或造成困擾。
+    <br /><br /><br /><br />
+
+    <div ondragover="handleDragOver(event)" ondrop="handleDrop(event)">
+        *******<br />
+        <br />
+        <br />
+        *******
+        </div>
+
+     <script type="text/javascript">
+        function handleDragOver(event) {
+            event.stopPropagation();
+            event.preventDefault();
+            event.dataTransfer.dropEffect = "copy";
+            // Display a "copy" cursor 顯示一個copy的滑鼠指標
+        }
+        function handleDrop(event) {
+            event.stopPropagation();
+            event.preventDefault();
+            event.target.innerHTML = e.dataTransfer.getData("text/plain");
+        }
+    </script>
+
+
+    <!-- ****************************************************** -->
+    <br /><br /><br /><br />
+    <div draggable="true">
+        www.dotblogs.com.tw/mis2000lab/
+    </div>
+
+
+    <br /><br /><br /><br />
+    <div draggable="true">
+        <h3>純文字(Plain Text)</h3>
+    </div>
+
+</body>
+</html>

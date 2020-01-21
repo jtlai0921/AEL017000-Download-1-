@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>範例二，修改資料屬性。</title>
+
+    <script>
+    // Create a user-defined object.
+    var obj = {};
+
+    // Add a data property to the object.
+    Object.defineProperty(obj, "newDataProperty", {
+        value: 101,
+        writable: true,
+        enumerable: true,
+        configurable: true
+    });
+
+    obj.newDataProperty = 102;   // 設定屬性的值。
+
+    document.write("Property value: " + obj.newDataProperty + "<br />");
+    // 執行成果： Property value: 102
+
+    //****************************************************************** (start)
+    // 修改資料物件的屬性(Property)變成「可寫入」屬性(Attribute)
+    Object.defineProperty(obj, "newDataProperty", { writable: false });
+
+    // List the property attributes by using a descriptor.
+    // Get the descriptor with Object.getOwnPropertyDescriptor.
+    var descriptor = Object.getOwnPropertyDescriptor(obj, "newDataProperty");
+
+    for (var prop in descriptor) {
+        document.write(prop + ': ' + descriptor[prop] + "<br />");
+    }
+    //****************************************************************** (end)
+    // --- 執行成果： --------------------------------------
+    // writable: false
+    // value: 102
+    // configurable: true
+    // enumerable: true
+
+    </script>
+
+</head>
+<body>
+    <h3>範例二，修改資料屬性。</h3>
+
+</body>
+</html>

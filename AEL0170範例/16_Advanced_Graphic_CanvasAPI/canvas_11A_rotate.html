@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style>
+        canvas {
+            border: solid blue 1px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="MyCanvas" width="400" height="400">
+        抱歉！瀏覽器不支援HTML5 canvas。<br />No canvas support in this browser
+    </canvas>
+
+    <script type="text/javascript">
+      var canvas = document.getElementById("MyCanvas");
+      var cW = canvas.width/2;
+      var cH = canvas.height/2;
+
+      function draw() {
+        if (canvas.getContext) {
+          var ctx = canvas.getContext("2d");
+          ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear area for repeated use
+
+          //  Set the angle between each vertex (5 internal, 5 external)
+          var vertAngle = (2 * Math.PI) / 10;
+
+          //  Size of star
+          var radius = 175;
+          //  Star center point
+          var starCenter = [0, 0]
+          //  Translate our coordinates so 0,0 is in the center of the canvas
+          ctx.translate(cW, cH);
+
+            //  And rotate it 1 degrees（公式：  弧度 = 角度 x Pi / 180）
+          ctx.rotate((1 * Math.PI) / 180);
+
+          //  Start shape, blue lines, yellow fill
+          ctx.beginPath();
+          //  Build the star hitting 10 points (11 to complete)
+          for (var i = 11; i != 0; i--) {
+            var r = radius * (i % 2 + 1) / 2;  // Alternate between inside and outside points
+            var curAngle = vertAngle * i;  //  Calculate angle of the current point
+            ctx.lineTo((r * Math.sin(curAngle)) + starCenter[0], (r * Math.cos(curAngle)) + starCenter[1]);
+          }
+
+            //  Fill and stroke
+          ctx.strokeStyle = "blue";  //藍色框線
+          ctx.lineWidth = "5"
+          ctx.fillStyle = "yellow";  //黃色（星星內部，填滿顏色）
+          ctx.stroke();
+          ctx.fill();
+
+          //  Reset the translate so clearRect works correctly
+          ctx.translate(-cW, -cH);   
+          }
+       }
+
+      //******************************************************
+      animate();  //動畫效果，會旋轉的原因！
+        
+      //  Animate calls the draw function every time the system lets it draw
+      function animate() {
+        draw();
+        //  requestAnimationFrame is a one shot function, needs to keep calling itself
+        window.requestAnimationFrame(animate);  //動畫效果，會旋轉的原因！
+      }
+        //******************************************************
+    </script>
+
+    <!-- 參考資料 http://msdn.microsoft.com/zh-tw/library/windows/apps/hh465865.aspx -->
+</body>
+</html>

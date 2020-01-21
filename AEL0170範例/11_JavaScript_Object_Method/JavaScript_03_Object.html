@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>為物件加入屬性（Property）</title>
+
+    <script>
+        //*** 範例一 ***
+        var emp1 = {};   //建立一個自訂物件。
+
+        emp1.FirstName = "MIS2000 Lab.";
+        // 設定這個物件的「屬性」，員工姓名、年紀、薪資等等。
+        emp1.age = 33;
+        emp1.salary = 22000;
+
+        emp1.payRise = function (amount) {
+            // 當屬性參考一個函數（function）時，就是一個方法（method）。
+            // 在這個方法裡面，關鍵字 "this"代表目前正在用的物件。
+            this.salary += amount;
+            return this.salary;
+        }
+
+
+        window.alert("員工的薪水是：" + emp1.salary);
+
+        //************************************************************
+        //*** 範例二 ***
+        var newSalary = emp1.payRise(1000);
+
+        document.write("範例二： var newSalary = emp1.payRise(1000);  <hr />");
+        document.write("這位同仁的薪資是： " + newSalary);
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

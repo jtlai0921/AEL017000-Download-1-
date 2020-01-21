@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    資料來源：W3C官方網站 http://www.w3.org/TR/workers/
+    <br />
+    <br />
+
+
+        這個數字會不斷在背景運算：<h1 id="result" style="color:red"></h1>
+    
+
+    <script>
+        var worker = new Worker('worker.js');
+
+        worker.onmessage = function (event) {
+            document.getElementById('result').textContent = event.data;
+        };
+    </script>
+
+</body>
+
+</html>

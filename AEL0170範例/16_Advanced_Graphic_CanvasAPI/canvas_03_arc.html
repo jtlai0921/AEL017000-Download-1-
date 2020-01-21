@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style>
+        canvas {
+            border: solid 1px blue;
+        }
+    </style>
+
+</head>
+<body>
+
+    <canvas id="canvas" width="400" height="275">
+        抱歉！瀏覽器不支援HTML5 canvas。<br />No canvas support in this browser
+    </canvas>
+
+    <script>
+        function curves() {
+            var canvas = document.getElementById("canvas");
+            if (canvas.getContext) {
+                var ctx = canvas.getContext("2d");
+                for (var i = 0; i < 2; i++)                            // Step through two rows.
+                {
+                    for (var j = 0; j < 3; j++)                        // Step through three versions.
+                    {
+                        ctx.beginPath();
+                        var x = 75 + j * 125;               // The x-coordinate.
+                        var y = 75 + i * 125;               // The y-coordinate.
+                        var radius = 50;                    // The arc radius.
+                        var startAngle = 0;                     // The starting point on the circle.
+                        var endAngle = Math.PI + (Math.PI * j) / 2; // The end point on the circle.
+                        var anticlockwise = i % 2 == 0 ? false : true; // The direction of drawing.
+                        ctx.lineWidth = 4;
+                        ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise); // Create the arc path.
+                        ctx.stroke();                               // Display the work.
+                    }
+                }
+            }
+        }// Curves function---End---
+
+        curves();   //執行上面的function
+    </script>
+    <!-- 資料來源：微軟官方網站 http://msdn.microsoft.com/zh-tw/library/windows/apps/hh465750.aspx -->
+</body>
+</html>

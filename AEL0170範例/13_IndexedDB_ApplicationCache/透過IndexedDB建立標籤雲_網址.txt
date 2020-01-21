@@ -1,0 +1,27 @@
+0_如何使用 IndexedDB 建立標記雲
+http://msdn.microsoft.com/zh-tw/library/ie/jj154908(v=vs.85).aspx
+
+============================================
+
+1_判斷資料庫需求
+http://msdn.microsoft.com/zh-tw/library/ie/jj154907(v=vs.85).aspx
+
+2_建立及開啟 IndexedDB 物件
+http://msdn.microsoft.com/zh-tw/library/ie/jj154905(v=vs.85).aspx
+
+3_使用交易管理資料
+http://msdn.microsoft.com/zh-tw/library/ie/jj154909(v=vs.85).aspx
+
+4_建立和使用標記雲
+http://msdn.microsoft.com/zh-tw/library/ie/jj154906(v=vs.85).aspx
+
+============================================
+
+
+
+
+使用 HTML5 AppCache 和 IndexedDB 建立離線體驗
+http://blogs.msdn.com/b/ie/archive/2011/09/27/building-offline-experiences-with-html5-appcache-and-indexeddb.aspx
+
+上述文章的 Demo成果
+http://ie.microsoft.com/testdrive/HTML5/Cookbook/

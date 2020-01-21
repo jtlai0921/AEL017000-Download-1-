@@ -1,0 +1,34 @@
+﻿/* -- Copyright © Microsoft Corporation. All rights reserved. */
+#collection
+{
+    width: 50%;
+    border: 1px solid black;
+
+    /* Specifies that the toolbar contents will be laid out according to Flexbox rules. */
+    display: flex;
+
+    /* Specifies that the flexbox will lay out its children in multiple lines*/
+    flex-flow: row wrap;
+
+    /* Specifies that the flexbox will position its children at the top of the container in LTR mode*/
+    align-content: flex-start;
+}
+.itemClass1
+{
+    background-color: red;
+    border: 3px solid magenta;
+    margin: 5px;
+}
+.itemClass2
+{
+    background-color: blue;
+    border: 3px solid cyan;
+    margin: 5px;
+    font-size: 2em;
+}
+.itemClass3
+{
+    background-color: green;
+    border: 3px solid grey;
+    margin: 5px;
+}

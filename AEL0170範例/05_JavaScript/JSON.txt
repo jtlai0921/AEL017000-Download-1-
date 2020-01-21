@@ -1,0 +1,24 @@
+相關網站：
+
+我整理的
+http://www.dotblogs.com.tw/mis2000lab/archive/2013/10/24/json_jquery.aspx
+
+線上編輯JSON網站
+http://www.jsoneditoronline.org/
+
+==================================================
+
+
+範例一，物件。
+{"科目":"數學", "分數":80}
+
+
+範例二，陣列。
+[1,2,3,4,5,6]
+
+
+範例三，複合型資料結構。
+[
+   {"name": "Eric Gruber", "currentTrack": "1"},
+   {"name": "Martin Weber", "currentTrack": "2"}
+]

@@ -1,0 +1,48 @@
+﻿/* -- Copyright © Microsoft Corporation. All rights reserved. */
+.resultContent div
+{
+    display: inline-block;
+    height: 200px;
+    margin: 0 5px;
+    width: 150px;
+}
+#twoStops
+{
+    background-image: radial-gradient(ellipse farthest-corner at center, #FFFFFF 0%, #00A3EF 100%);
+    background-image: -moz-radial-gradient(center, ellipse farthest-corner, #FFFFFF 0%, #00A3EF 100%);
+    background-image: -o-radial-gradient(center, ellipse farthest-corner, #FFFFFF 0%, #00A3EF 100%);
+    background-image: -webkit-radial-gradient(center, ellipse farthest-corner, #FFFFFF 0%, #00A3EF 100%);
+
+    /* Internet Explorer 10 versions lower than Release Preview */
+    background-image: -ms-radial-gradient(center, ellipse farthest-corner, #FFFFFF 0%, #00A3EF 100%);
+}
+
+#threeStops
+{
+    /* Internet Explorer 10 versions lower than Release Preview */
+    background-image: -ms-radial-gradient(center, ellipse farthest-corner, #FFFFFF 0%, #10BCA3 50%, #00A3EF 100%);
+    background-image: -moz-radial-gradient(center, ellipse farthest-corner, #FFFFFF 0%, #10BCA3 50%, #00A3EF 100%);
+    background-image: -o-radial-gradient(center, ellipse farthest-corner, #FFFFFF 0%, #10BCA3 50%, #00A3EF 100%);
+    background-image: -webkit-radial-gradient(center, ellipse farthest-corner, #FFFFFF 0%, #10BCA3 50%, #00A3EF 100%);
+    background-image: radial-gradient(ellipse farthest-corner at center, #FFFFFF 0%, #10BCA3 50%, #00A3EF 100%);
+}
+
+#fourStops
+{
+    /* Internet Explorer 10 versions lower than Release Preview */
+    background-image: -ms-radial-gradient(center, ellipse farthest-corner, #FFFFFF 0%, #10BCA3 50%, #9DC245 75%, #00A3EF 100%);
+    background-image: -moz-radial-gradient(center, ellipse farthest-corner, #FFFFFF 0%, #10BCA3 50%, #9DC245 75%, #00A3EF 100%);
+    background-image: -o-radial-gradient(center, ellipse farthest-corner, #FFFFFF 0%, #10BCA3 50%, #9DC245 75%, #00A3EF 100%);
+    background-image: -webkit-radial-gradient(center, ellipse farthest-corner, #FFFFFF 0%, #10BCA3 50%, #9DC245 75%, #00A3EF 100%);
+    background-image: radial-gradient(ellipse farthest-corner at center, #FFFFFF 0%, #10BCA3 50%, #9DC245 75%, #00A3EF 100%);
+}
+
+#fourStopsCircle
+{
+    /* Internet Explorer 10 versions lower than Release Preview */
+    background-image: -ms-radial-gradient(center, circle farthest-corner, #FFFFFF 0%, #10BCA3 50%, #9DC245 75%, #00A3EF 100%);
+    background-image: -moz-radial-gradient(center, circle farthest-corner, #FFFFFF 0%, #10BCA3 50%, #9DC245 75%, #00A3EF 100%);
+    background-image: -o-radial-gradient(center, circle farthest-corner, #FFFFFF 0%, #10BCA3 50%, #9DC245 75%, #00A3EF 100%); 
+    background-image: -webkit-radial-gradient(center, circle farthest-corner, #FFFFFF 0%, #10BCA3 50%, #9DC245 75%, #00A3EF 100%);
+    background-image: radial-gradient(circle farthest-corner at center, #FFFFFF 0%, #10BCA3 50%, #9DC245 75%, #00A3EF 100%);
+}

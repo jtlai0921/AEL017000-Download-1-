@@ -1,0 +1,11 @@
+﻿CACHE MANIFEST
+CACHE:
+Manifest_02.html
+Book1.jpg
+
+FALLBACK:
+* Book4_Error.jpg
+#如果需要任何一個「未被快取」的,jpg圖片，就改由 Book4.jpg取代。
+
+NETWORK:
+Book2.jpg

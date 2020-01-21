@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>範例四，修改存取子屬性。</title>
+
+    <script>
+        // Create a user-defined object.
+        var obj = {};
+
+        // Add an accessor property to the object.
+        Object.defineProperty(obj, "newAccessorProperty", {
+            set: function (x) {
+                document.write("in property set accessor" + "<br />");
+                this.newaccpropvalue = x;
+            },
+            get: function () {
+                document.write("in property get accessor" + "<br />");
+                return this.newaccpropvalue;
+            },
+            enumerable: true,
+            configurable: true
+        });
+
+        obj.newAccessorProperty = 30;   // 設定屬性的值。
+        document.write("Property value: " + obj.newAccessorProperty + "<br />");
+        // 執行成果： 
+        // in property set accessor
+        // in property get accessor
+        // Property value: 30
+
+        //****************************************************************** (start)
+        Object.defineProperty(obj, "newAccessorProperty", {
+            get: function () { return this.newaccpropvalue; }
+        });
+
+        // List the property attributes by using a descriptor.
+        // Get the descriptor with Object.getOwnPropertyDescriptor.
+        var descriptor = Object.getOwnPropertyDescriptor(obj, "newAccessorProperty");
+
+        for (var prop in descriptor) {
+            document.write(prop + ': ' + descriptor[prop] + "<br />");
+        }
+        // 執行成果： 
+        // get: function () { return this.newaccpropvalue; }
+        // set: function (x) { document.write("in property set accessor" + newLine); this.newaccpropvalue = x; }
+        // configurable: true
+        // enumerable: true
+        //****************************************************************** (end)
+
+    </script>
+
+</head>
+<body>
+
+    <h3>範例四，修改存取子屬性。</h3>
+
+</body>
+</html>

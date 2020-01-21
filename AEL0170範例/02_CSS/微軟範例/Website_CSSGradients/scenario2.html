@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<!-- Copyright © Microsoft Corporation. All rights reserved. -->
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Internet Explorer Developer Sample</title>
+    <link rel="stylesheet" type="text/css" href="css/base-sdk.css" />
+    <link rel="stylesheet" type="text/css" href="css/scenario2.css" />
+    <script type="text/javascript" src="script/base-sdk.js"></script>
+</head>
+<body role="application">
+    <div id="header" role="contentinfo"></div>
+
+    <!--Sample title-->
+    <h1 id="sampleTitle">CSS Gradients</h1>
+
+    <h2>Scenario 2: Radial gradients</h2>
+    <p>
+        <a href="default.html">Back to scenarios menu</a>
+    </p>
+
+    <div class="descRegion" role="region" aria-labelledby="descLabel" aria-live="assertive">
+        <h2 class="descLabel">Description</h2>
+        <div class="descContent">
+
+        <!--Description and code snippet-->
+        <p>
+            This code sample demonstrates the syntax for circular and elliptical radial gradients with two, three,
+            and four color stops on <a href="http://msdn.microsoft.com/en-us/ie/aa740471">
+            Internet Explorer 10 Release Preview</a> and higher.
+        </p>
+        <p>
+            For syntax that is supported on earlier versions of Internet Explorer 10 and other browsers, refer to the scenario2.css file.
+        </p>
+        <h2 class="codeLabel">Code</h2>
+<pre>
+#twoStops
+{
+    background-image: radial-gradient(ellipse farthest-corner at center,
+                                      #FFFFFF 0%,
+                                      #00A3EF 100%);
+}
+#threeStops
+{
+    background-image: radial-gradient(ellipse farthest-corner at center,
+                                      #FFFFFF 0%,
+                                      #10BCA3 50%,
+                                      #00A3EF 100%);
+}
+#fourStops
+{
+    background-image: radial-gradient(ellipse farthest-corner at center,
+                                      #FFFFFF 0%,
+                                      #10BCA3 50%,
+                                      #9DC245 75%,
+                                      #00A3EF 100%);
+}
+#fourStopsCircle
+{
+    background-image: radial-gradient(circle farthest-corner at center,
+                                      #FFFFFF 0%,
+                                      #10BCA3 50%,
+                                      #9DC245 75%,
+                                      #00A3EF 100%);
+}
+</pre>
+        </div>
+    </div>
+
+    <!--Rendered result-->
+    <div class="resultRegion" role="region" aria-labelledby="resultLabel" aria-live="assertive">
+        <h2 class="resultLabel">Result</h2>
+    
+        <div class="resultContent">
+            <div id="twoStops"></div>
+            <div id="threeStops"></div>
+            <div id="fourStops"></div>
+            <div id="fourStopsCircle"></div>
+        </div>
+    </div>
+
+    <div id="footer" role="contentinfo"></div>
+</body>
+</html>

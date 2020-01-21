@@ -1,0 +1,44 @@
+﻿/* -- Copyright © Microsoft Corporation. All rights reserved. */
+#scenario5MCLayout1
+{
+    /*This CSS rule specifies that the column content will be laid out
+    sequentially, with each column filling before the next starts to fill*/
+    column-fill: auto;
+
+    /*This CSS rule defines a variable number of columns, depending on the
+    width of the parent container, each with a minimum width of 200px*/
+    column-width: 200px;
+
+    /*This CSS rule defines that text in each column should be fully justified,
+    and hyphens should be automatically inserted into words when needed.
+    Note that this approach is generally recommended with narrow columns*/
+    -ms-hyphens: auto;
+    text-align: justify;
+
+    /*CSS rules to improve multi-column layout visibility*/
+    height: 200px;
+    border: 1px solid black;
+
+    margin-bottom: 20px;
+}
+
+#scenario5MCLayout2
+{
+    /*This CSS rule specifies that the column content will be laid out to balance,
+    such that each column will have approximately the same amount of content*/
+    column-fill: balance;
+
+    /*This CSS rule defines a variable number of columns, depending on the
+    width of the parent container, each with a minimum width of 200px*/
+    column-width: 200px;
+
+    /*This CSS rule defines that text in each column should be fully justified,
+    and hyphens should be automatically inserted into words when needed.
+    Note that this approach is generally recommended with narrow columns*/
+    -ms-hyphens: auto;
+    text-align: justify;
+
+    /*CSS rules to improve multi-column layout visibility*/
+    height: 200px;
+    border: 1px solid black;
+}

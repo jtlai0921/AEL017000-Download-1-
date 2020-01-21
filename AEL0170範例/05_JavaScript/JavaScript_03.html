@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>在下午5點後建立內含「Good evening.晚安」的字串</title>
+
+    <script type="text/javascript">
+
+        var now = new Date();  //設定為「日期時間」的資料型態。
+
+        var greeting = "Good" + ((now.getHours() > 17) ? " evening.晚安" : " day.日安");
+
+
+        document.write("目前時間（24小時制）：" + now.getHours());
+        document.write("<br />" + greeting);
+        // 於瀏覽器視窗內直接顯示
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>HTML5 API，讀取二進位檔</title>
+</head>
+<body>
+
+    請選取圖片檔（二進位）：<input type="file" id="theBinaryFile" onchange="onLoadBinaryFile()" />
+
+    <br /><br />
+
+    圖片預覽：<img id="theImage" />
+
+    <script type="text/javascript">
+        function onLoadBinaryFile() {
+            var theFile = document.getElementById("theBinaryFile");
+
+            // 確定選取了一個二進位檔案，而非其他格式。
+            if (theFile.files.length != 0 && theFile.files[0].type.match(/image.*/)) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    var theImg = document.getElementById("theImage");
+                    theImg.src = e.target.result;
+                };
+                reader.onerror = function (e) {
+                    alert("例外狀況，無法讀取二進位檔");
+                };
+
+                // 讀取二進位檔案。
+                reader.readAsDataURL(theFile.files[0]);
+            }
+            else {
+                alert("請選取一個二進位檔");
+            }
+        }
+    </script>
+
+
+
+
+
+</body>
+</html>

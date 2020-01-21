@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>W3Schools範例</title>
+</head>
+<body>
+
+    <canvas id="myCanvas" style="border:1px solid #d3d3d3;" width="500" height="300">
+        抱歉！瀏覽器不支援HTML5 canvas。<br />No canvas support in this browser
+    </canvas>
+
+    <img id="wales" src="Wales.png" style="display: none;" />
+
+    <!-- Script放在上方就無法運作。請注意！ -->
+    <script>
+    // Get the canvas element and its drawing context.
+    var canvas = document.getElementById('myCanvas');
+    var context = canvas.getContext('2d');
+
+    var img = document.getElementById("wales");
+    var pat = context.createPattern(img, "repeat");
+
+    context.rect(0, 0, 450, 250);
+
+    context.fillStyle = pat;
+    context.fill();
+    </script>
+
+    <!-- 資料來源：http://www.w3schools.com/tags/canvas_createpattern.asp -->
+
+</body>
+</html>

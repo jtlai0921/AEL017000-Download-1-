@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>資料來源：jQuery官方網站</title>
+
+    <script src="Scripts/jquery-1.8.2.js" type="text/javascript"></script>
+
+</head>
+<body>
+
+
+    <img alt="這是一張圖片但是圖檔遺失了" id="Image1" src="找不到圖片.jpg">
+    <!-- 這裡因為沒有圖片，所以會自動找出error.jpg圖片來取代之 -->
+
+
+
+    <br /><br />
+
+    <div id="other">
+        ***請點選我*** <br />
+        點選(click)以後，會觸發 select()。
+    </div>
+    
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#Image1")
+              .error(function () {
+                  alert(" .error() 被觸發了！")
+              })
+              .attr("src", "error.jpg");
+            // 修改src屬性，改用error.jpg這張圖片來代替之。           
+
+
+            //資料來源：jQuery官方網站  http://api.jquery.com/error/。
+        });
+    </script>
+
+</body>
+</html>

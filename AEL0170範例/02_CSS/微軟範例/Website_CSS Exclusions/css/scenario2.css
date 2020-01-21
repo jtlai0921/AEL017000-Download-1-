@@ -1,0 +1,32 @@
+﻿/* -- Copyright © Microsoft Corporation. All rights reserved. */
+#container
+{
+    /*The parent container must be set to postion: relative because position: absolute elements,
+    such as the figure, only position themselves relative to the nearest non-static ancestor
+    element*/
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+
+    /*The content of the container will be divided up into 3 equally-sized columns using CSS
+    Multi-column*/
+    columns: 3;
+
+    /*This code activates full justification and hyphenation for text, which is recommended
+    for text intersecting with exclusions*/
+    -ms-hyphens: auto;
+    text-align: justify;
+}
+#figure
+{
+    /*This code specifies the element as an exclusion and allows content to flow on all sides if it. */
+    -ms-wrap-flow: both;
+
+    position: absolute;
+    top: 3em;
+    /*The exclusion is positioned to always be positioned in the middle column, and have a width
+    of one column*/
+    left: 34%;
+    width: 33%;
+}

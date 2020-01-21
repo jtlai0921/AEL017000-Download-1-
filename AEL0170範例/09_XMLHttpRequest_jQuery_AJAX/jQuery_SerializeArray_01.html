@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script src="Scripts/jquery-1.10.2.js"></script>
+</head>
+<body>
+    <h3>資料來源：http://api.jquery.com/serializeArray/ </h3>
+
+    <form>
+        <div><input type="text" name="a" value="1" id="a"></div>
+        <div><input type="text" name="b" value="2" id="b"></div>
+        <div><input type="hidden" name="c" value="3" id="c"></div>
+
+        <div>
+            <textarea name="d" rows="8" cols="40">4</textarea>
+        </div>
+
+        <div>
+            <select name="e">
+                <option value="5" selected="selected">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+            </select>
+        </div>
+
+        <div>
+            <input type="checkbox" name="f" value="8" id="f">
+        </div>
+
+        <div>
+            <input type="submit" name="g" value="Submit" id="g">
+        </div>
+
+    </form>
+
+
+
+    <script>
+        $("form").submit(function (event) {
+            console.log($(this).serializeArray());
+            // 產生JSON格式的陣列來表示「欄位」與「值」。
+
+            event.preventDefault();
+        });
+
+        // 產生的成果 console.log（格式）如下：
+
+        // [
+        //   {
+        //      name: "a", value: "1"
+        //   },
+        //   {
+        //      name: "b", value: "2"
+        //   },
+        //   {
+        //      name: "c", value: "3"
+        //   },
+        //   {
+        //      name: "d", value: "4"
+        //   },
+        //   {
+        //      name: "e", value: "5"
+        //   }
+        // ]
+    </script>
+
+</body>
+</html>

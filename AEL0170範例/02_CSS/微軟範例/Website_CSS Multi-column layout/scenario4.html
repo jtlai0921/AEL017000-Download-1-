@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- Copyright © Microsoft Corporation. All rights reserved. -->
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Internet Explorer Developer Sample</title>
+    <link rel="stylesheet" type="text/css" href="css/base-sdk.css" />
+    <link rel="stylesheet" type="text/css" href="css/scenario4.css" />
+    <script type="text/javascript" src="script/base-sdk.js"></script>
+</head>
+<body role="application">
+    <div id="header" role="contentinfo"></div>
+
+    <h1 id="sampleTitle">CSS Multi-column layout</h1>
+
+    <!--Sample title-->
+    <h2>Scenario 4: Column span</h2>
+    <p>
+        <a href="default.html">Back to scenarios menu</a>
+    </p>
+
+    <!--Description and code snippet-->
+    <div class="descRegion" role="region" aria-labelledby="descLabel" aria-live="assertive">
+        <h3 id="descLabel">Description</h3>
+        <div class="descContent">
+            <p>
+                This code demonstrates how column spans can be created through CSS rules,
+                and how column spans create divisions between content within the multi-column
+                layout, effectively restarting the layout after each span.
+                (Try adjusting the width of the browser window to see text reflow.)
+            </p>
+            <h3 class="codeLabel">Code</h3>
+<pre>
+#scenario4Container
+{
+    /*This CSS rule defines a variable number of columns, depending on the width of the
+    parent container, each with a minimum width of 200px*/
+    column-width: 200px;
+
+    /*This CSS rule defines a gap between columns of 20px, and a 1px-wide solid black
+    column rule between columns. Note that the column rule width does not impact
+    the size of the column gap*/
+    column-gap: 20px;
+    column-rule: 1px solid black;
+
+    /*This CSS rule defines that text in each column should be fully justified, and
+    hyphens should be automatically inserted into words when needed. Note that this
+    approach is generally recommended
+    with narrow columns*/
+    -ms-hyphens: auto;
+    text-align: justify;
+}
+
+.scenario4Span
+{
+    /*This CSS rule causes elements of this class to span the multi-column layout,
+    effectively causing a break between the content before and the content after
+    each span*/
+    column-span: all;
+
+    /*CSS rules to improve span visibility*/
+    border: 1px solid black;
+    background-color: #ddd;
+}
+</pre>
+        </div>
+    </div>
+
+    <!--Rendered result-->
+    <div class="resultRegion" role="region" aria-labelledby="resultLabel" aria-live="assertive">
+        <h3 id="resultLabel">Result</h3>
+        <div class="resultContent">
+            <div id="scenario4Container">
+                <h1 class="scenario4Span">Article Title</h1>
+                <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
+                do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <h1 class="scenario4Span">Article Subtitle</h1>
+                <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit anim id est laborum.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer" role="contentinfo"></div>
+</body>
+</html>

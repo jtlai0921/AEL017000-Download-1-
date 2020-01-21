@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>解釋「Hoisting的意義」</title>
+
+    <script>
+        var num = 7;
+
+        function ScopingAndHoisting() {
+            if (true) {
+                var num = 42;
+            }
+            window.alert("變數num：  " + num);
+
+            // 因為JavaScript的 Hoisting與Scoping特性，
+            // 所以JavaScript會把 a 這個變數當成在function的「第一列」宣告(建立)的變數來用
+            // 如同在 function裡面的第一列，重新宣告 --
+            //********************
+            //  var a;
+            //********************
+            //if (true) {
+            //    var num = 42;
+            //}
+            //window.alert("變數num：  " + num);
+        }
+
+        //--------------------------------
+        //--上面是程式，底下是第一次呼叫這個 function。
+        ScopingAndHoisting();
+    </script>
+
+</head>
+<body>
+    <!-- 解釋「Hoisting的意義」。此範例源自微軟教材。 -->
+</body>
+</html>

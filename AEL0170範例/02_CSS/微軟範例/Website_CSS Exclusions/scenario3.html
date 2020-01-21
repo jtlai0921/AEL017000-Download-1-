@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!-- Copyright © Microsoft Corporation. All rights reserved. -->
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Internet Explorer Developer Sample</title>
+    <link rel="stylesheet" type="text/css" href="css/base-sdk.css" />
+    <link rel="stylesheet" type="text/css" href="css/scenario3.css" />
+    <script type="text/javascript" src="script/base-sdk.js"></script>
+</head>
+<body role="application">
+    <div id="header" role="contentinfo"></div>
+
+    <h1 id="sampleTitle">CSS Exclusions</h1>
+
+    <!--Sample title-->
+    <h2>Scenario 3: Exclusion placed in grid</h2>
+    <p>
+        <a href="default.html">Back to scenarios menu</a>
+    </p>
+
+    <!--Description and code snippet-->
+    <div class="descRegion" role="region" aria-labelledby="descLabel" aria-live="assertive">
+        <h3 id="descLabel">Description</h3>
+        <div class="descContent">
+            <p>
+                This code demonstrates how a exclusion can be positioned within the grid
+                layout of a parent container. Try adjusting the width of the parent window to
+                see how the position and size of the figure adjusts to the size of the parent
+                container.
+            </p>
+            <h3 class="codeLabel">Code</h3>
+<pre>
+#container
+{
+    /*The parent container must be set to 'position:relative' because 'position:absolute'
+    elements, such as the figure, only position themselves relative to the nearest
+    non-static ancestor element*/
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+
+    /*This code specifies that the parent countainer will lay out its content in a 4x4
+    grid, with each row and column receiving an equal share of the available space*/
+    
+    display: -ms-grid;
+    -ms-grid-rows: (100px)[4];
+    -ms-grid-columns: (100px)[4];
+}
+#figure
+{
+    /*This code specifies the element as an exclusion and allows content to flow
+    on all sides if it. */
+    -ms-wrap-flow: both;
+
+    /*This code specifies that the exclusion will be positioned in the second column, second
+    row of the parent container, and will extend across two rows and two columns*/
+    -ms-grid-column: 2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    -ms-grid-column-span: 2;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+</pre>
+        </div>
+    </div>
+
+    <!--Rendered result-->
+    <div class="resultRegion" role="region" aria-labelledby="resultLabel" aria-live="assertive">
+        <h3 id="resultLabel">Result</h3>
+        <div class="resultContent">
+            <div id="container">
+                <p class="paragraph" id="paragraph1">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p class="paragraph" id="paragraph2">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p class="paragraph" id="paragraph3">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
+                culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p class="paragraph" id="paragraph4">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                culpa qui officia deserunt mollit anim id est laborum.                </p>
+                <img id="figure" src="images/windows.jpg" />
+            </div>
+        </div>
+    </div>
+    <div id="footer" role="contentinfo"></div>
+</body>
+</html>

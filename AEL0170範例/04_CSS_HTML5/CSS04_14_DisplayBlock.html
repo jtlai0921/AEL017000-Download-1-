@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+
+    <style type="text/css">
+        p {
+            display: inline;  /* 預設值 */
+        }
+
+        div.test1 {
+            display: none;
+        }
+
+        div.test2 {
+            display: block ;  /* 段落之間，自動帶入換行（段落）符號 */
+        }
+
+        div.test3 {
+            display: flexbox; /* 段落之間，自動帶入換行（段落）符號 */
+        }
+    </style>
+
+</head>
+<body>
+
+    <p>(1). 使用的display: inline成果。</p>
+    <br />
+
+    <div class="test1">(2). 使用的display: none成果。</div>
+    <!-- 上面這段文字會消失，在畫面上看不見 -->
+
+    <br />
+    <div class="test2">(3). 使用的display: block成果-1。</div>
+    <div class="test2">(4). 使用的display: block成果-2。</div>
+
+    <br />
+    <div class="test3">(5). 使用的display: list-item成果（項目清單）。</div>
+
+</body>
+</html>

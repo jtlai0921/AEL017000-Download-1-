@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>橢圓形</title>
+</head>
+<body>
+    <b>橢圓形</b> --
+    <br />cx與cy屬性，用來標示圖形的「中間點」。<br />
+    比圓形 (circles)  多了「圓角」的rx與ry屬性。
+    <hr />
+
+
+    <br /><br />
+    三個橢圓，重疊<br /><br />
+    <svg>
+        <ellipse cx="240" cy="100" rx="220" ry="30" style="fill:purple" />
+        <ellipse cx="220" cy="70" rx="190" ry="20" style="fill:lime" />
+        <ellipse cx="210" cy="45" rx="170" ry="15" style="fill:yellow" />
+    </svg>
+
+    <br /><br />
+    中空橢圓（中間的圓是小的、白色）<br /><br />
+    <svg>
+        <ellipse cx="240" cy="50" rx="220" ry="30" style="fill:yellow" />
+        <ellipse cx="240" cy="50" rx="190" ry="20" style="fill:white" />
+    </svg>
+    <!-- 以上的參考資料：http://www.w3schools.com/svg/svg_ellipse.asp  -->
+
+
+
+    <br /><br />
+    橢圓與外框線（stroke）<br /><br />
+    <svg xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="150" cy="60" rx="110" ry="30" stroke="blue" fill="red" />
+        <ellipse cx="150" cy="140" rx="110" ry="30" stroke="blue" fill="yellow" />
+    </svg>
+
+
+</body>
+</html>

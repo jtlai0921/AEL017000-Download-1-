@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <div draggable="true" ondrag="handleDrag(event)">
+        <b>Some content</b> to be dragged.
+    </div>
+
+
+
+    <script type="text/javascript">
+        function handleDrag(event) {
+            event.dataTransfer.effectAllowed = "copy";
+            event.dataTransfer.setData("text/plain", event.target.innerHTML);
+        }
+    </script>
+
+
+</body>
+</html>

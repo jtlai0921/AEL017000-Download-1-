@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>transition-timing-function</title>
+    <style>
+        div {
+            width: 100px;
+            height: 50px;
+            background: blue;
+            color: white;
+            font-weight: bold;
+            transition: width 3s;
+        }
+        
+        /* Standard syntax */
+        #div1 {
+            transition-timing-function: linear;
+        }
+        #div2 {
+            transition-timing-function: ease;
+        }
+        #div3 {
+            transition-timing-function: ease-in;
+        }
+        #div4 {
+            transition-timing-function: ease-out;
+        }
+        #div5 {
+            transition-timing-function: ease-in-out;
+        }
+        div:hover {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+
+    滑鼠指向之後，請靜待三秒跑完動畫！<br /><br />
+    <div id="div1" style="top:100px">linear</div><br /><br />
+    <div id="div2" style="top:150px">ease</div><br /><br />
+    <div id="div3" style="top:200px">ease-in</div><br /><br />
+    <div id="div4" style="top:250px">ease-out</div><br /><br />
+    <div id="div5" style="top:300px">ease-in-out</div>
+
+    <!-- 資料來源  http://www.w3schools.com/cssref/css3_pr_transition-timing-function.asp -->
+</body>
+</html>

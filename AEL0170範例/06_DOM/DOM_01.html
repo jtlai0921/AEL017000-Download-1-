@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Ch.6-1</title>
+</head>
+<body>
+
+    <form name="contactForm">
+        <input type="text" name="nameBox" id="nameBoxId" value="預設值" />
+
+        <button onclick="">請按我！</button>
+    </form>
+
+
+    <!-- **********************************************************  -->
+    <!-- 如果您把這段JavaScript寫在上面的<head>裡面，程式執行會報錯。 -->
+    <!-- 因為還沒執行到<form>就要抓取元素了。 -->
+    <script type="text/javascript">
+        var userNameBox = document.getElementById("nameBoxId");
+        var username = userNameBox.value;
+
+        document.write(username + "** 寫在網頁內 **");
+        // 於瀏覽器視窗內直接顯示
+
+        window.alert(username);
+    </script>
+
+</body>
+</html>

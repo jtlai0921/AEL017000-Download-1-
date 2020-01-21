@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+
+    <script>
+        var Person = function (name, age) {
+            // Private properties. 不使用this關鍵字來宣告變數。
+            var _name, _age;
+
+            //使用this關鍵字可以確保外部的程式碼可以看見這些”方法”。
+            this.getName = function () {
+                return _name;
+            }
+            this.setName = function (name) {
+                _name = name;
+            }
+            this.getAge = function () {
+                return _age;
+            }
+            this.setAge = function (age) {
+                if (age > 0 && age < 100)
+                    _age = age;
+            }
+
+            // Constructor logic.
+            _name = name;
+            this.setAge(age);
+        }
+
+        // 在雛形裡面定義的公開方法，不可以存取私有屬性。
+        Person.prototype =
+        {
+            toString: function () {
+                return this.getName() + " is " + this.getAge();
+            }
+        }
+
+        // **** 外部的程式 ****
+        var person1 = new Person("Joe", 21);
+
+        alert(person1.toString());   // 執行成果 "Joe is 21"
+        alert(person1._name);      // 執行成果"undefined"
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

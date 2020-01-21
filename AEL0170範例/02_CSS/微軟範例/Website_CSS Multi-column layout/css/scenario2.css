@@ -1,0 +1,22 @@
+﻿/* -- Copyright © Microsoft Corporation. All rights reserved. */
+#scenario2Container
+{
+    /*This CSS rule defines a variable number of columns,
+    depending on the width of the parent container, each
+    with a minimum width of 200px*/
+    column-width: 200px;
+
+    /*This CSS rule defines a gap between columns of 20px,
+    and a 1px-wide solid black column rule between columns.
+    Note that the column rule width does not impact the
+    size of the column gap*/
+    column-gap: 20px;
+    column-rule: 1px solid black;
+
+    /*This CSS rule defines that text in each column should
+    be fully justified, and hyphens should be automatically
+    inserted into words when needed. Note that this approach
+    is generally recommended with narrow columns*/
+    -ms-hyphens: auto;
+    text-align: justify;
+}

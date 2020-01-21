@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+
+    <style>
+        #parent {
+                perspective: 300px;
+                perspective-origin: -50px -20px;
+        }
+        #child1 {
+                background-color: orange;
+                position: absolute;
+                transform-origin: 50px 50px;
+                transform: rotateY(30deg);
+        }
+        #child2 {
+                background-color: deepskyblue;
+                position: absolute;
+                transform-origin: 70px 70px;
+                transform: rotateY(30deg) translate(350px);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="parent">
+        <h3 id="child1">This is child1</h3>
+        <h3 id="child2">This is child2</h3>
+    </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>源自 jQuery官方網站的範例</title>
+
+    <script src="Scripts/jquery-1.8.2.js" type="text/javascript"></script>
+
+    <style>
+        p {
+            margin: 8px;
+            font-size: 20px;
+            color: blue;
+            cursor: pointer;
+        }
+        b {
+            text-decoration: underline;
+        }
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 請參閱 jQuery官方網站的解說： http://api.jquery.com/category/manipulation/ -->
+    <h3>只要在段落&lt;p&gt;裡面，按下去（click），這個段落&lt;p&gt;，會被修改成HTML碼。</h3>
+    <!-- 本範例的資料來源：http://api.jquery.com/html/ -->
+
+
+    <p>
+           <b>Click</b> to change the <span id="tag">html</span>
+           to a <span id="text">text</span> node.
+    </p>
+
+
+    <br /><hr /><br />
+
+    <p>
+           This <button name="Button1">button</button> does nothing.
+    </p>
+
+
+    <script>
+        $("p").click(function () {   //只要在段落<p>裡面，按下去（click）就會觸發這個事件
+
+            var htmlString = $(this).html();
+            //這個段落<p>裡面的字，會被修改成HTML碼。
+            $(this).text(htmlString);
+        });
+    </script>
+
+</body>
+</html>

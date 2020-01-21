@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>sessionStorage（暫存性資料）</title>
+</head>
+<body>
+    <h3>sessionStorage（暫存性資料）</h3> 
+    <div><label>索引 ID -- </label><input id="myId" placeholder="重複輸入相同的，不算！" /></div>
+    <div><label>數值 Value -- </label><input id="myValue" /></div>
+
+    <div id="buttons">
+        <button id="button1_add">加入</button>
+        <button id="button2_clear">清除</button>
+    </div>
+    <p id="countmsg">共有 <span id="count"></span>筆記錄在<b>session</b>Storage裡面。</p>
+
+
+    <table id="table1" border="1">
+        <tr>
+            <th>索引 ID</th>
+            <td>數值 Value</td>
+        </tr>
+    </table>
+
+
+
+    <script>
+    displayData();
+
+    var buttons = document.getElementsByTagName("button");
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].onclick = handleButtonPress;
+    }
+
+    function handleButtonPress(e) {
+        switch (e.target.id) {
+            case 'button1_add':
+                var key = document.getElementById("myId").value;
+                var value = document.getElementById("myValue").value;
+                sessionStorage.setItem(key, value);    //****************
+                break;
+
+            case 'button2_clear':
+                sessionStorage.clear();    //****************
+                break;
+        }
+        displayData();
+    }
+
+    function displayData() {
+        var tableElem = document.getElementById("table1");
+        tableElem.innerHTML = "";    //不清空的話，下次新增資料會重複出現
+
+        var itemCount = sessionStorage.length;
+        document.getElementById("count").innerHTML = itemCount;
+
+        for (var i = 0; i < itemCount; i++) {
+            var SS_key = sessionStorage.key(i);
+            var SS_value = sessionStorage[SS_key];
+            tableElem.innerHTML += "<tr><th>" + SS_key + ":</th>" + "<td>" + SS_value + "</td></tr>";
+        }
+    }
+    </script>
+
+</body>
+</html>

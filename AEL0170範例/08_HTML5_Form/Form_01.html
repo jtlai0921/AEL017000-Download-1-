@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>第八章 HTML5 Form</title>
+</head>
+<body>
+
+    <form name="userLogin" method="get" action="login.aspx">
+        <fieldset>
+            <legend>(表單標題) 請輸入您個人資料：</legend>
+            <div id="usernameField" class="field">
+
+                <label for="uname">帳號：</label>
+                <input id="uname" name="username" type="text" placeholder="請輸入完整姓名" />
+
+            </div>
+
+            <div id="passwordField" class="field">
+
+                <label for="pwd">密碼：</label>
+                <input id="pwd" name="password" type="password" placeholder="請輸入密碼" />
+                
+            </div>
+        </fieldset>
+
+        <input type="submit" value="確定送出" />
+    </form>
+
+
+</body>
+</html>

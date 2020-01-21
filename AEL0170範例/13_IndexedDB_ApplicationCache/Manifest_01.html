@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" manifest="mis2000lab_01.manifest">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>使用Cache</title>
+</head>
+<body>
+    <h3>使用Cache，離線存取</h3>
+
+    <img id="Image1" />
+
+    <div>
+        <button id="Book1">ASP.NET_C#</button>
+        <button id="Book2">ASP.NET_VB</button>
+        <button id="Book3">ASP.NET_AdvancedSample</button>
+    </div>
+
+
+    <script>
+            var buttons = document.getElementsByTagName("button");
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].onclick = handleButtonPress;
+            }
+
+            function handleButtonPress(e) {
+                document.getElementById("Image1").src = e.target.id + ".jpg";
+            }
+    </script>
+
+
+    <h4>作者網站--<a href="http://www.dotblogs.com.tw/mis2000lab/">http://www.dotblogs.com.tw/mis2000lab/</a></h4>
+</body>
+</html>

@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>W3Schools範例</title>
+    <style>
+        canvas {
+            border: 2px solid darkblue;
+            background-color: lightgreen;
+        }
+    </style>
+
+</head>
+<body>
+
+
+    <canvas id="myCanvas">
+        抱歉！瀏覽器不支援HTML5 canvas。<br />No canvas support in this browser
+    </canvas>
+
+
+    <!-- Script放在上方就無法運作。請注意！ -->
+    <script>
+        var canvas = document.getElementById('myCanvas');
+        var context = canvas.getContext('2d');
+
+        context.fillStyle = "red";
+        context.fillRect(20, 20, canvas.width - 40, canvas.height - 40);
+    </script>
+
+
+    <!-- 資料來源：http://www.w3schools.com/html/html5_canvas.asp -->
+</body>
+</html>

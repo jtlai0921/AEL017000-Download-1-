@@ -1,0 +1,75 @@
+﻿/* -- Copyright © Microsoft Corporation. All rights reserved. */
+.resultContent div
+{
+    border: 0px solid #333333;
+    font-size: 32pt;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    margin: 0px auto 3px auto;
+    vertical-align: middle;
+}
+.fire
+{
+    background: black;
+    color: white;
+    font-family: Impact, Sans-Serif;
+    padding-top: 25px;
+    text-shadow: 0px 0px 4px white, 0px -5px 4px #ff3, 2px -10px 6px #fd3, -2px -15px 11px #f80, 2px -25px 18px #f20;
+}
+.block
+{
+    background: #999999;
+    font-family: Tahoma, Sans-Serif;
+    color: #663300;
+    text-shadow: #FF9933 1px 1px, #FF9933 2px 2px, #FF9933 3px 3px, #FF9933 4px 4px, #FF9933 5px 5px, #FF9933 6px 6px, #FF9933 7px 7px;
+}
+.liney
+{
+    background: #CCFFFF;
+    font-family: Impact, Sans-Serif;
+    color: #000033;
+    text-shadow: #CCFFFF 2px 2px, #3399CC 4px 4px;
+}
+.cartoon
+{
+    font-family: Comic Sans MS, Sans-Serif;
+    font-size: 42pt;
+    background: #FFFFEE;
+    color: rgba(255, 51, 155, .6);
+
+    /* Fallback if spread distance parameter is not supported on CSS3 text-shadow */
+    text-shadow: rgba(255, 255, 255, 1) -2px -2px -5px, #FF3399 0px 0px, black 0px 0px 5px;
+
+    /* Text-shadow including spread distance parameter */
+    text-shadow: rgba(255, 255, 255, 1) -2px -2px 3px -5px, #FF3399 0px 0px, black 0px 0px 0px 5px;
+}
+.engraved
+{
+    font-family: Verdana, Sans-Serif;
+    background: #999999;
+    color: transparent;
+
+    /* Fallback if spread distance parameter is not supported on CSS3 text-shadow */
+    text-shadow: black 0px 0px -2px, #666666 0px 0px 0px, white 1px 1px 0px;
+
+    /* Text-shadow including spread distance parameter */
+    text-shadow: black 0px 0px 0px -2px, #666666 0px 0px 0px 0px, white 1px 1px 0px 0px;
+}
+.text3d
+{
+    font-size: 32pt;
+    font-family: Tahoma, Sans-Serif;
+    background: black;
+    color: red;
+
+    /* Fallback if spread distance parameter is not supported on CSS3 text-shadow */
+    text-shadow: white 0px -1px 4px, rgba(255, 0, 0, .8) 0px -4px 7px, rgba(255, 0, 0, .5) 0px -6px 12px, rgba(255, 0, 0, .5) 0px -7.5px 15px;
+
+    /* Text-shadow including spread distance parameter */
+    text-shadow: white 0px -1px 0px 4px, rgba(255, 0, 0, .8) 0px -4px 0px 7px, rgba(255, 0, 0, .5) 0px -6px 0px 12px, rgba(255, 0, 0, .5) 0px -7.5px 0px 15px;
+
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+

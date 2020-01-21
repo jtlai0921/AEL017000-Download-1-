@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<!-- Copyright © Microsoft Corporation. All rights reserved. -->
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Internet Explorer Developer Sample</title>
+    <link rel="stylesheet" type="text/css" href="css/base-sdk.css" />
+    <link rel="stylesheet" type="text/css" href="css/program.css" />
+    <script type="text/javascript" src="script/base-sdk.js"></script>
+</head>
+<body role="application">
+    <div id="header" role="contentinfo"></div>
+
+    <!--Sample title-->
+    <h1 id="sampleTitle">CSS Text-shadow</h1>
+
+    <div class="descRegion" role="region" aria-labelledby="descLabel" aria-live="assertive">
+        <h2 id="descLabel">Description</h2>
+        <div class="descContent">
+
+        <!--Description and code snippet-->
+        <p>
+            The 'text-shadow' propertyy accepts a comma-separated list of shadows that
+            attaches one or more drop shadows to the specified text. Each shadow is made
+            up of a space-delimited list of the following: horizontal offset, vertical offset,
+            (optional) blur radius, (optional) spread distance, and color.
+        </p>
+        <p>
+            This code demonstrates some of the ways you can style text with CSS
+            text-shadow to achieve different graphical effects.
+        </p>
+        <h2 class="codeLabel">Code</h2>
+<pre>
+.fire
+{
+    background: black;
+    color: white;
+    font-family: Impact, Sans-Serif;
+    padding-top: 25px;
+    text-shadow: 0px 0px 4px white,
+                 0px -5px 4px #ff3,
+                 2px -10px 6px #fd3,
+                 -2px -15px 11px #f80,
+                 2px -25px 18px #f20;
+}
+.block
+{
+    background: #999999;
+    font-family: Tahoma, Sans-Serif;
+    color: #663300;
+    text-shadow: #FF9933 1px 1px,
+                 #FF9933 2px 2px,
+                 #FF9933 3px 3px,
+                 #FF9933 4px 4px,
+                 #FF9933 5px 5px,
+                 #FF9933 6px 6px,
+                 #FF9933 7px 7px;
+}
+.liney
+{
+    background: #CCFFFF;
+    font-family: Impact, Sans-Serif;
+    color: #000033;
+    text-shadow: #CCFFFF 2px 2px, #3399CC 4px 4px;
+}
+.cartoon
+{
+    font-family: Comic Sans MS, Sans-Serif;
+    font-size: 42pt;
+    background: #FFFFEE;
+    color: rgba(255, 51, 155, .6);
+    text-shadow: rgba(255, 255, 255, 1) -2px -2px 3px -5px,
+                 #FF3399 0px 0px,
+                 black 0px 0px 0px 5px;
+}
+.engraved
+{
+    font-family: Verdana, Sans-Serif;
+    background: #999999;
+    color: transparent;
+    text-shadow: black 0px 0px 0px -2px,
+                 #666666 0px 0px 0px 0px,
+                 white 1px 1px 0px 0px;
+}
+.text3d
+{
+    font-size: 32pt;
+    font-family: Tahoma, Sans-Serif;
+    background: black;
+    color: red;
+    text-shadow: white 0px -1px 0px 4px,
+                 rgba(255, 0, 0, .8) 0px -4px 0px 7px,
+                 rgba(255, 0, 0, .5) 0px -6px 0px 12px,
+                 rgba(255, 0, 0, .5) 0px -7.5px 0px 15px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+</pre>
+        </div>
+    </div>
+
+    <!--Rendered result-->
+    <div class="resultRegion" role="region" aria-labelledby="resultLabel" aria-live="assertive">
+        <h2 id="resultLabel">Result</h2>
+    
+        <div class="resultContent">
+            <div class="fire">Firey Text</div>
+            <div class="block">Block Text</div>
+            <div class="liney">Semi-Outlined Text</div>
+            <div class="cartoon">Cartoony Text*</div>
+            <div class="engraved">Engraved Text*</div>
+            <div class="text3d">3D Text*</div>
+            <p>
+                Text examples marked by an asterisk (*) use the fourth, optional parameter
+                of the 'text-shadow' property (spread distance) and may not be supported
+                on all browsers that implement CSS3 text-shadow.
+            </p>
+        </div>
+    </div>
+
+    <div class="seeAlsoRegion" role="region" aria-labelledby="seeAlsoLabel" aria-live="assertive">
+        <h3 id="seeAlsoLabel">See also</h3>
+        <div class="seeAlsoContent">
+            <h4>Reference</h4>
+            <p>
+                <a target="_blank" href="http://msdn.microsoft.com/en-us/library/ie/hh771872(v=vs.85).aspx">text-shadow property</a>
+            </p>
+            <h4>Conceptual</h4>
+            <p>
+                <a target="_blank" href="http://msdn.microsoft.com/en-us/library/ie/hh673564(v=vs.85).aspx">Internet Explorer 10 Developer Guide: CSS Text drop shadows</a>
+            </p>
+            <h4>Internet Explorer Test Drive</h4>
+            <p>
+                <a target="_blank" href=" http://ie.microsoft.com/testdrive/Graphics/hands-on-css3/hands-on_text-shadow.htm">Hands On: text-shadow</a>
+            </p>
+            <h4>IEBlog</h4>
+            <p>
+                <a target="_blank" href="http://blogs.msdn.com/b/ie/archive/2011/09/29/css3-text-shadow-in-ie10.aspx">CSS3 text-shadow in IE10</a>
+            </p>
+            <h4>Internet Explorer Testing Center</h4>
+            <p>
+                <a target="_blank" href="http://samples.msdn.microsoft.com/ietestcenter/#css3text">CSS Text Shadow</a>
+            </p>
+        </div>
+    </div>
+
+    <div id="footer" role="contentinfo"></div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+
+    <style type="text/css">
+        body {
+            text-align: center;
+        }
+
+        article {
+            padding: 10px;
+            border: 2px solid red;
+        }
+
+        div {
+            display: table-cell;    /* 本範例修改的重點！！  */
+
+            margin: 10px;
+            padding: 5px;
+            border: 2px solid black;
+            width: 150px;
+            height: 150px;
+        }
+
+            div:nth-child(odd) {
+                font-size: 4rem;    /* 複數列 */
+            }
+    </style>
+
+</head>
+<body>
+
+    <article>
+        <div id="one">One(壹)</div>
+        <div id="two">Two(貳)</div>
+        <div id="three">Three(叁)</div>
+        <div id="four">Four(肆)</div>
+    </article>
+
+</body>
+</html>

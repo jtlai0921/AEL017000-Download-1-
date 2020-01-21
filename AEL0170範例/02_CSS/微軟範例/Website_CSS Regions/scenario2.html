@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- Copyright © Microsoft Corporation. All rights reserved. -->
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Internet Explorer Developer Sample</title>
+    <link rel="stylesheet" type="text/css" href="css/base-sdk.css" />
+    <link rel="stylesheet" type="text/css" href="css/scenario2.css" />
+    <script type="text/javascript" src="script/base-sdk.js"></script>
+</head>
+<body role="application">
+    <div id="header" role="contentinfo"></div>
+
+    <h1 id="sampleTitle">CSS Regions</h1>
+
+    <!--Sample title-->
+    <h2>Scenario 2: How to use CSS Regions with CSS Flexbox</h2>
+    <p>
+        <a href="default.html">Back to scenarios menu</a>
+    </p>
+
+    <!--Description and code snippet-->
+    <div class="descRegion" role="region" aria-labelledby="descLabel" aria-live="assertive">
+        <h3 id="descLabel">Description</h3>
+        <div class="descContent">
+            <p>
+                This code sample demonstrates how to flow data into a Flexbox using CSS Regions.
+            </p>
+            <h3 class="codeLabel">Code</h3>
+<pre>
+// CSS
+.content-source {
+    -ms-flow-into: content;
+}
+
+.s2-flex-box {
+     display: -ms-flexbox;
+}
+
+.s2-region {
+     -ms-flow-from: content;
+
+    width: 300px;
+    height: 150px;
+    border: 1px solid #ccc;
+}
+
+// HTML
+&lt;iframe class="content-source" src="content.html"&gt;&lt;/iframe&gt;
+&lt;div class="s2-flex-box"&gt;
+    &lt;div class="s2-region"&gt;&lt;/div&gt;
+    &lt;div class="s2-region"&gt;&lt;/div&gt;
+    &lt;div class="s2-region"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+        </div>
+    </div>
+
+    <!--Rendered result-->
+    <div class="resultRegion" role="region" aria-labelledby="resultLabel" aria-live="assertive">
+        <h3 id="resultLabel">Result</h3>
+        <div class="resultContent">
+            <iframe class="content-source" src="content.html"></iframe>
+            <div class="s2-flex-box">
+                <div class="s2-region"></div>
+                <div class="s2-region"></div>
+                <div class="s2-region"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer" role="contentinfo"></div>
+</body>
+</html>

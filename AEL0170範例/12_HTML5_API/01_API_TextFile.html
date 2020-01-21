@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>HTML5 API，讀取文字檔</title>
+</head>
+<body>
+
+    請選取文字檔：<input type="file" id="theTextFile" onchange="onLoadTextFile()" />
+    <br /><br />
+
+    結果將重現在此：<textarea id="theMessageArea" rows="30" cols="40"></textarea>
+
+    <script type="text/javascript">
+        function onLoadTextFile() {
+                var theFile = document.getElementById("theTextFile");
+
+                // 確定選取了一個文字檔案，而非其他格式。
+                if (theFile.files.length != 0 && theFile.files[0].type.match(/text.*/))
+                {
+                    var reader = new FileReader();
+                    reader.onload = function(e){
+                            var MessageArea = document.getElementById("theMessageArea");
+                            MessageArea.value = e.target.result;
+                    };
+                    reader.onerror = function(e){
+                    alert("例外狀況，無法讀取文字檔");
+                };
+
+                    // 讀取文字檔案，第二個參數預設是UTF-8。
+                    reader.readAsText(theFile.files[0], "ISO-8859-1");
+                }
+                else {
+                    alert("請選取一個文字檔");
+                }
+        }
+    </script>
+
+
+</body>
+</html>

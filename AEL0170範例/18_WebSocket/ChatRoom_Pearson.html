@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script>
+        // global reference to our web worker
+        var worker = null;
+        // on page load start the web worker
+        function startWorkerThread() {
+         // add button event handlers
+         var btnTimeStamp = document.getElementById('Button1');
+         var btnTerminateWorker = document.getElementById('Button2');
+
+         btnTimeStamp.addEventListener('click' ,getTimeStamp, false);
+         btnTerminateWorker.addEventListener('click', terminateWorker, false);
+
+         // create the web worker instance
+         worker = new Worker('ChatRoom_Pearson.js');
+
+         // assign handler for receiving messages from web worker
+        worker.onmessage = function (event) {
+             // display the message in our result field
+             document.getElementById('result').textContent = event.data;
+         };
+        }
+
+        // handle the button to terminate the web worker
+        function terminateWorker() {
+             // tell the web worker to terminate
+            worker.terminate();
+        }
+
+        // local thread to time stamp and show how main thread is
+        // not blocked by calculations going on
+        function getTimeStamp() {
+             // get the current date and time and add to the time log
+             var currentDateTime = new Date();
+             document.getElementById('timeLog').innerHTML += currentDateTime+ '<br />';
+        }
+
+        // kick off the web worker on page load
+        window.addEventListener('load', startWorkerThread, false);
+</script>
+
+</head>
+<body>
+    <!-- 資料來源： HTML5 Developer's Cookbook  / PEARSON-->
+    <!-- 建議使用 Chrome瀏覽器 -->
+
+    <p>Computing <output id="result"></output></p>
+
+    <button id="Button1">Time Stamp</button>
+    <button id="Button2">Terminate Worker</button>
+
+    <section id="timeLog"></section>
+
+</body>
+</html>

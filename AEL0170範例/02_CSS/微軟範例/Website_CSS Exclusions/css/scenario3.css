@@ -1,0 +1,69 @@
+﻿/* -- Copyright © Microsoft Corporation. All rights reserved. */
+#container
+{
+    /*The parent container must be set to position: relative because position: absolute
+    elements, such as the figure, only position themselves relative to the nearest
+    non-static ancestor element*/
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+
+    /*This code specifies that the parent countainer will lay out its content in a 4x4 grid,
+    with each row and column receiving an equal share of the available space*/
+    display: -ms-grid;
+    -ms-grid-rows: (100px)[4];
+    -ms-grid-columns: (100px)[4];
+}
+#figure
+{
+    /*This code specifies the element as an exclusion and allows content to flow on all sides if it. */
+    -ms-wrap-flow: both;
+
+    /*This code specifies that the exclusion will be positioned in the second column, second row
+    of the parent container, and will extend across two rows and two columns*/
+    -ms-grid-column: 2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    -ms-grid-column-span: 2;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.paragraph
+{
+    /*This code activates full justification and hyphenation for text, which is recommended for
+    text intersecting with exclusions*/
+    -ms-hyphens: auto;
+    text-align: justify;
+    overflow: hidden;
+    margin: 10px;
+}
+#paragraph1
+{
+    -ms-grid-column: 1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column-span: 2;
+}
+#paragraph2
+{
+    -ms-grid-column: 3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column-span: 2;
+}
+#paragraph3
+{
+    -ms-grid-column: 1;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 2;
+    -ms-grid-column-span: 2;
+}
+#paragraph4
+{
+    -ms-grid-column: 3;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 2;
+    -ms-grid-column-span: 2;
+}

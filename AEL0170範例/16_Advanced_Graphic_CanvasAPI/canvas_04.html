@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>微軟範例</title>
+</head>
+<body>
+
+    <canvas id="myCanvas">
+        抱歉！瀏覽器不支援HTML5 canvas。<br />No canvas support in this browser
+    </canvas>
+
+    <!-- Script放在上方就無法運作。請注意！ -->
+    <script>
+            // Get the canvas element and its drawing context.
+            var canvas = document.getElementById('myCanvas');
+            var context = canvas.getContext('2d');
+
+            // Clear any existing content in the canvas.  清除canvas現有的內容
+            context.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Set the stroke color and the fill color.
+            context.strokeStyle = "rgb(0, 0, 255)";
+            context.fillStyle = "rgba(255, 0, 0, 0.75)";
+
+            // Create a path in absolute coordinates.
+            context.beginPath();
+               context.moveTo(60, 30);  //畫出三條線，變成三角形。
+               context.lineTo(100, 90);
+               context.lineTo(20, 90);
+            // Close the path.
+            context.closePath();  //不寫的話，三角形左邊沒有線條。
+
+            // Draw the path as a stroked shape;
+            context.stroke();
+            // Draw the path as a filled shape.
+            context.fill();
+    </script>
+
+</body>
+</html>

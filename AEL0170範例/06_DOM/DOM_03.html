@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+
+    <script type="text/javascript">
+        function myFunction() {
+            var list = document.getElementById("VenueList");
+            list.removeChild(list.childNodes[0]);
+
+            //第二種寫法也可以。
+            //list.removeChild(document.getElementById("VenueList").firstChild);
+
+        }
+    </script>
+
+</head>
+<body>
+
+    <!-- HTML Markup for VenueList -->
+    <ul id="VenueList">
+        <li>Room A</li>
+        <li>Room B</li>
+        <li>Room C</li>
+        <li>Room D</li>
+        <li>Room E</li>
+        <li>Room F</li>
+    </ul>
+
+    <button onclick="myFunction()">按下按鈕，刪除子項目</button>
+
+
+
+    <!-- **********************************************************  -->
+    <!-- 資料來源 http://www.w3schools.com/jsref/met_node_removechild.asp -->
+
+</body>
+</html>

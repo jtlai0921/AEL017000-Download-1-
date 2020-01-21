@@ -1,0 +1,41 @@
+﻿/* -- Copyright © Microsoft Corporation. All rights reserved. */
+.content-source {
+ -ms-flow-into: content;
+}
+
+.s3-grid {
+ display: -ms-grid;
+ -ms-grid-columns: 1fr 1fr 1fr;
+ -ms-grid-rows: 1fr 1fr;
+ width: 100%;
+ height: 768px;
+}
+
+.s3-region {
+ -ms-flow-from: content;
+ 
+ width: 100%;
+ height: 100%;
+ border: 1px solid #ccc;
+}
+
+.s3-region-1 {
+ -ms-grid-column: 1;
+ -ms-grid-row: 1;
+}
+
+.s3-region-2 {
+ -ms-grid-column: 2;
+ -ms-grid-row: 1;
+}
+
+.s3-region-3 {
+ -ms-grid-column: 3;
+ -ms-grid-row: 1;
+}
+
+.s3-region-4 {
+ -ms-grid-column: 1;
+ -ms-grid-row: 2;
+ -ms-grid-column-span: 3;
+}

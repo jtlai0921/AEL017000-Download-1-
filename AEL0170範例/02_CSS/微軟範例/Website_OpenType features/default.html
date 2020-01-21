@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<!-- Copyright © Microsoft Corporation. All rights reserved. -->
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>OpenType Features using font-feature-settings</title>
+    <link rel="stylesheet" type="text/css" href="css/base-sdk.css" />
+    <link rel="stylesheet" type="text/css" href="css/program.css" />
+    <script type="text/javascript" src="script/base-sdk.js"></script>
+</head>
+<body role="application">
+    <div id="header" role="contentinfo"></div>
+
+    <!--Sample title-->
+    <h1 id="sampleTitle">OpenType features</h1>
+
+    <div class="descRegion" role="region" aria-labelledby="descLabel" aria-live="assertive">
+      <h2 id="descLabel">Description</h2>
+      <div class="descContent">
+
+        <!--Description and code snippet-->
+        <p>This sample demonstrates how to use the font-feature-settings property to access a 
+            stylistic set built into the Gabriola font on Windows.</p>
+        <h2 class="codeLabel">Code</h2>
+<pre>
+.default {
+        font-family: Gabriola;
+        font-size: 32pt;
+    }
+#opentype {
+    -moz-font-feature-settings: "ss06=1";
+    -ms-font-feature-settings: "ss06" 1;
+    -webkit-font-feature-settings: "ss06" 1;
+    -o-font-feature-settings: "ss06" 1;
+}
+</pre>
+        </div>
+    </div>
+
+    <!--Rendered result-->
+    <div class="resultRegion" role="region" aria-labelledby="resultLabel" aria-live="assertive">
+        <h2 id="resultLabel">Result</h2>
+    
+        <div class="resultContent">
+            <p class="default">This Quick Brown Fox does not have OpenType features.</p>
+            <p class="default" id="opentype">This Quick Brown Fox uses Gabriola's stylistic set 6.</p>
+        </div>
+    </div>
+
+    <div class="seeAlsoRegion" role="region" aria-labelledby="seeAlsoLabel" aria-live="assertive">
+        <h3 id="seeAlsoLabel">See also</h3>
+        <div class="seeAlsoContent">
+            <h4>Reference</h4>
+            <p>
+                <a target="_blank" href="http://msdn.microsoft.com/en-us/library/ie/hh869409(v=vs.85).aspx">-ms-font-feature-settings</a>
+            </p>
+            <h4>Conceptual</h4>
+            <p>
+                <a target="_blank" href="http://msdn.microsoft.com/en-us/library/ie/hh708741(v=vs.85).aspx">Internet Explorer 10 Developer Guide: CSS Fonts</a><br />
+                <a target="_blank" href="http://msdn.microsoft.com/en-us/library/gg699339(VS.85).aspx">How to Enhance Your Website's Type Design with CSS3</a>
+            </p>
+            <h4>Internet Explorer Test Drive</h4>
+            <p>
+                <a target="_blank" href="http://ie.microsoft.com/testdrive/Graphics/opentype/Default.html ">Use The Whole Font</a>
+            </p>
+            <h4>IEBlog</h4>
+            <p>
+                <a target="_blank" href=" http://blogs.msdn.com/b/ie/archive/2012/01/09/css-corner-using-the-whole-font.aspx">CSS Corner: Using the Whole Font</a>
+            </p>
+            <h4>Internet Explorer Testing Center</h4>
+            <p>
+                <a target="_blank" href="http://samples.msdn.microsoft.com/ietestcenter/#css3fonts">CSS Fonts</a>
+            </p>
+        </div>
+    </div>
+
+    <div id="footer" role="contentinfo"></div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            border-style: solid;
+            border-width: 1px;
+        }
+
+        .auto-style2 {
+            background-color: #FF99CC;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>原始的表格</h3>
+    <br>
+    <table id="table1" class="auto-style1" style="width: 100%" border="1">
+        <tr>
+            <td>1-1 AAA</td>
+            <td>1-2 BBB</td>
+        </tr>
+        <tr>
+            <td class="auto-style2">2-1 CCC</td>
+            <td class="auto-style2">2-2 DDD</td>
+        </tr>
+        <tr>
+            <td>3-1 EEE</td>
+            <td>3-2 FFF</td>
+        </tr>
+    </table>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+
+    <h3>範例一：visibility:hidden</h3>
+    <br>
+    <table id="table2" class="auto-style1" style="width: 100%" border="1">
+        <tr>
+            <td>1-1 AAA</td>
+            <td>1-2 BBB</td>
+        </tr>
+        <tr>
+            <td class="auto-style2" style="visibility: hidden">2-1 CCC</td>
+            <td class="auto-style2" style="visibility: hidden">2-2 DDD</td>
+        </tr>
+        <tr>
+            <td>3-1 EEE</td>
+            <td>3-2 FFF</td>
+        </tr>
+    </table>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+
+    <h3>範例二：display:none</h3>
+    <br>
+    <table id="table3" class="auto-style1" style="width: 100%" border="1">
+        <tr>
+            <td>1-1 AAA</td>
+            <td>1-2 BBB</td>
+        </tr>
+        <tr>
+            <td class="auto-style2" style="display: none">2-1 CCC</td>
+            <td class="auto-style2" style="display: none">2-2 DDD</td>
+        </tr>
+        <tr>
+            <td>3-1 EEE</td>
+            <td>3-2 FFF</td>
+        </tr>
+    </table>
+
+
+</body>
+</html>

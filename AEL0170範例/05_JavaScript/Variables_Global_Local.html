@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>全域變數（Global Variable）與區域變數（Local Variable）</title>
+
+    <script type="text/javascript">
+        function Global_Local() {
+            var var_L1 = 'A-區域變數';  //區域變數
+            var_L2 = 'B';   // 比較一下這個變數，到底是「區域變數」或是「全域變數」？
+            document.write('var_L1的值 (Global_Local function裡面)：' + var_L1 + '<br />');
+            document.write('var_L2的值 (Global_Local function裡面)：' + var_L2 + '<hr />');
+        }
+
+        //===================================================
+        var var_G3 = 'C-全域變數';  //全域變數
+
+        Global_Local();　// 呼叫Global_Local function
+
+        document.write('<br />var_L2的值：' + var_L2 + '<br />');
+        //當你把上面這一列的變數名稱，改成 var_L1就會報錯。因為var_L1是區域變數！
+
+        document.write('var_G3的值：' + var_G3 + '<hr />');
+
+        //===================================================
+
+        var var_G3 = '***全域變數2（同名）***';  //全域變數，故意取一個同名的！
+        document.write('<br />第二個「同名的」var_G3的值：' + var_G3 + '<hr />');
+        // 因為這是一個「同名」的全域變數，所以新的「值」會覆蓋舊的。
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

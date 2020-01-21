@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!-- Copyright © Microsoft Corporation. All rights reserved. -->
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Internet Explorer Developer Sample</title>
+    <link rel="stylesheet" type="text/css" href="css/base-sdk.css" />
+    <link rel="stylesheet" type="text/css" href="css/scenario3.css" />
+    <script type="text/javascript" src="script/base-sdk.js"></script>
+</head>
+<body role="application">
+    <div id="header" role="contentinfo"></div>
+
+    <h1 id="sampleTitle">CSS Multi-column layout</h1>
+
+    <!--Sample title-->
+    <h2>Scenario 3: Column breaks</h2>
+    <p>
+        <a href="default.html">Back to scenarios menu</a>
+    </p>
+
+    <!--Description and code snippet-->
+    <div class="descRegion" role="region" aria-labelledby="descLabel" aria-live="assertive">
+        <h3 id="descLabel">Description</h3>
+        <div class="descContent">
+            <p>
+                This code demonstrates how column breaks can be controlled through CSS rules.
+                Specifically, a column break will always occur after the red paragraph, and
+                the browser will lay out content so that a break in the blue paragraph is 
+                generally avoided. (Try adjusting the width of the browser window to see
+                text reflow.)
+            </p>
+            <h3 class="codeLabel">Code</h3>
+<pre>
+#scenario3Container
+{
+    /*This CSS rule defines that there will be 3 columns of varying width, regardless
+    of the size of the container*/
+    column-count: 3;
+
+    /*This CSS rule defines a gap between columns of 20px, and a 1px-wide solid black
+    column rule between columns. Note that the column rule width does not impact the
+    size of the column gap*/
+    column-gap: 20px;
+    column-rule: 1px solid black;
+
+    /*This CSS rule defines that text in each column should be fully justified, and
+    hyphens should be automatically inserted into words when needed. Note that this
+    approach is generally recommended with narrow columns*/
+    -ms-hyphens: auto;
+    text-align: justify;
+
+    /*CSS rules to control the flow behavior of text and make it easier to observe
+    column break behavior*/
+    height: 300px;
+    column-fill: auto;
+}
+#scenario3Paragraph1
+{
+    /*CSS rules ensure a column break will always occur after the red paragraph*/
+    break-after: column;
+    color: red;
+}
+#scenario3Paragraph3
+{
+    /*CSS rules ensures a column break will be avoided inside the blue paragraph*/
+    break-inside: avoid;
+    color: blue;
+}
+</pre>
+        </div>
+    </div>
+
+    <!--Rendered result-->
+    <div class="resultRegion" role="region" aria-labelledby="resultLabel" aria-live="assertive">
+        <h3 id="resultLabel">Result</h3>
+        <div class="resultContent">
+            <div id="scenario3Container">
+                <p id="scenario3Paragraph1">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                </p>
+                <p id="scenario3Paragraph2">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                eu fugiat nulla pariatur.
+                </p>
+                <p id="scenario3Paragraph3">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                eu fugiat nulla pariatur.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer" role="contentinfo"></div>
+</body>
+</html>

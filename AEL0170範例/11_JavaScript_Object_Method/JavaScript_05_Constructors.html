@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>使用構造（Constructors）函數</title>
+
+    <script>
+        //*** 範例一 ***
+        // 透過Constructors function（構造函數）建構一個新的物件並且初始化它的值。
+
+        var myAccount = function (id, name) {
+            this.id = id;
+            this.name = name;
+            this.balance = 0;    //銀行帳戶餘額。
+            this.numTransactions = 0;  //交易次數。
+        };
+        
+
+        //************************************************************
+        //*** 範例二 ***
+        var acc1 = new myAccount(1, "John");
+        var acc2 = new myAccount(2, "Mary");
+
+        document.write("範例二：<hr />");
+        document.write("<br />  acc1的大名是： " + acc1.name);
+        document.write("<br />  acc2的大名是： " + acc2.name);
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

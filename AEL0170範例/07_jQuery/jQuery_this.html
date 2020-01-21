@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="Scripts/jquery-1.8.2.js" type="text/javascript"></script>
+</head>
+<body>
+
+    <p>您好！這是第1個段落</p>
+    <p>您好！這是第2個段落</p>
+    <p>您好！這是第3個段落</p>
+    <p>您好！這是第4個段落</p>
+    <p>您好！這是第5個段落</p>
+
+    <h2>您好！這是第一個h2標題</h2>
+    <h2>您好！這是第二個h2標題</h2>
+    <h2>您好！這是第三個h2標題</h2>
+
+    
+
+    <script type="text/javascript">
+        $("p").each(function () {
+            $(this).css("color", "red");
+            // $(this)與 this不同。
+            // 把全部的<p>都改成紅色字！
+        });
+    </script>
+
+    <!-- $(this)與 this不同。 -->
+    <!-- 您可以參考 http://www.neatstudio.com/show-833-1.shtml -->
+
+</body>
+</html>

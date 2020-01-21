@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Object Literal Notation</title>
+
+    <script>
+        //*** 範例一 ***  另一種寫法，請跟上一個範例對照。
+        var emp2 = {
+            FirstName: "程式大師",
+            age: 42,
+            salary: 60000,    // 以上是屬性。下面是方法（method）。
+
+            payRise: function (amount) {
+                // 當屬性參考一個函數（function）時，就是一個方法（method）。
+                // 在這個方法裡面，關鍵字 "this"代表目前正在用的物件。
+                this.salary += amount;
+                return this.salary;
+            },
+
+            // 第二個方法（無參數，不需輸入值）。
+            displayDetails: function () {
+                alert(this.FirstName + "的年紀：" + this.age + "，薪資是：" + this.salary);
+            }
+        };
+
+        window.alert("員工的薪水是：" + emp2.salary);
+
+        //************************************************************
+        //*** 範例二 ***（此方法需傳入一個參數，並且有傳回值）
+        var newSalary = emp2.payRise(1000);
+
+        document.write("範例二： var newSalary = emp2.payRise(1000);  <hr />");
+        document.write("這位同仁的薪資是： " + newSalary);
+        
+        //************************************************************
+        //*** 範例三 ***  （此方法無參數，不需輸入值）
+        emp2.displayDetails();        // 呼叫 .displayDetails()方法
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- Copyright © Microsoft Corporation. All rights reserved. -->
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Internet Explorer Developer Sample</title>
+    <link rel="stylesheet" type="text/css" href="css/base-sdk.css" />
+    <link rel="stylesheet" type="text/css" href="css/scenario2.css" />
+    <script type="text/javascript" src="script/base-sdk.js"></script>	
+</head>
+<body role="application">
+    <div id="header" role="contentinfo"></div>
+
+    <h1 id="sampleTitle">CSS Flexbox</h1>
+
+    <!--Sample title-->
+    <h2>Scenario 2: Flexbox item collection</h2>
+    <p>
+        <a href="default.html">Back to scenarios menu</a>
+    </p>
+
+    <!--Description and code snippet-->
+    <div class="descRegion" role="region" aria-labelledby="descLabel" aria-live="assertive">
+        <h3 id="descLabel">Description</h3>
+        <div class="descContent">
+            <p>
+                This code demonstrates how Flexbox can be used to create a simple item
+                collection to hold elements such as images and text boxes. To demonstrate,
+                please resize the browser window's width--as the Flexbox container changes
+                size, the Flexbox creates more or fewer lines of elements and wraps the
+                element collection as needed. The code below shows how the Flexbox container
+                has the -ms-flex-flow property set to row wrap, which cases elements to wrap
+                around the box and create multiple rows as needed.
+            </p>
+            <h3 class="codeLabel">Code</h3>
+<pre>
+#collection
+{
+    width: 50%;
+    border: 1px solid black;
+
+    /* Specifies that the toolbar contents will be laid out according to Flexbox rules. */
+    display: flex;
+
+    /* Specifies that the flexbox will lay out its children in multiple lines*/
+    flex-flow: row wrap;
+
+    /* Specifies that the flexbox will position its children at the top of the container in LTR mode*/
+    align-content: flex-start;
+}
+</pre>
+        </div>
+    </div>
+
+    <!--Rendered result-->
+    <div class="resultRegion" role="region" aria-labelledby="resultLabel" aria-live="assertive">
+        <h3 id="resultLabel">Result</h3>
+        <div class="resultContent">
+            <div id="collection">
+                <div class="itemClass1">First child</div>
+                <div class="itemClass2">Second child</div>
+                <div class="itemClass3">Third child</div>
+                <div class="itemClass2">Second child</div>
+                <div class="itemClass3">Third child</div>
+                <div class="itemClass1">First child</div>
+                <div class="itemClass3">Third child</div>
+                <div class="itemClass2">Second child</div>
+                <div class="itemClass1">First child</div>
+                <div class="itemClass2">Second child</div>
+                <div class="itemClass1">First child</div>
+                <div class="itemClass2">Second child</div>
+                <div class="itemClass3">Third child</div>
+                <div class="itemClass2">Second child</div>
+            </div>
+        </div>
+    </div>
+    <div id="footer" role="contentinfo"></div>
+</body>
+</html>

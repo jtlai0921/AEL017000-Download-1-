@@ -1,0 +1,126 @@
+﻿/* -- Copyright © Microsoft Corporation. All rights reserved. */
+#toolbar
+{
+    height: 50px;
+    border: 1px solid black;
+
+    /* Specifies that the toolbar contents will be laid out according to Flexbox rules. */
+    display: flex;
+
+    /* Specifies that any excess space that does not go to flexible children will be evenly distributed between them*/
+    justify-content: space-between;
+
+    /* Ensures that the toolbar will not expand beyond 650 pixels */
+    max-width: 650px;
+
+    /* Ensures that the toolbar will not shrink beyond 300 pixels */
+    min-width: 300px;
+
+    /*styling rules*/
+    background-color: #115511;
+    border-radius: 10px;
+}
+.appButton
+{
+    /* Sets all excess space to be evenly distributed between the buttons*/
+    flex: 1 1 100px;
+
+    /* Buttons will only grow to 150 pixels wide */
+    /* Note that in combination with the 750 max width for the toolbar, the 150 max width for the 4 flexible children means that the children will all grow in size to 150px, then 3 gaps between the children will grow up to 50px until the toolbar reaches its maximum size and all growth stops */
+    max-width: 150px;
+
+    /* Ensures that the buttons will not shrink beyond 50 pixels */
+    min-width: 50px;
+
+
+    /*styling rules*/
+    background-color: #119911;
+    border: 1px solid #11CC11;
+    border-radius: 10px;
+    margin: 2px;
+    color: #CCCCCC;
+    font-weight: bold;
+}
+#buttonPlay
+{
+    /* Here the A button is set to grow 3 times faster than other buttons in the toolbar. That is, 3 times the excess space is added to the A button as to other children of the toolbar. */
+    flex: 3 1 100px;
+    max-width: 225px;
+}
+#buttonVolPlus
+{
+    margin-bottom: 0px;
+    border-radius: 10px 10px 0px 0px;
+}
+#buttonVolMinus
+{
+    margin-top: 0px;
+    border-radius: 0px 0px 10px 10px;
+}
+/* Controls the styling of a subgroup of buttons */
+#buttonGroup
+{
+    display: flex;
+    
+    /* The default layout of flexbox children is along the inline axis; this sets blocks to be laid out in a perpendicular direction */
+    flex-direction: column;
+
+    /* Sets the div surrounding the buttons to have the same flexibility and constraints as other buttons */
+    flex: 1 1 100px;
+    max-width: 150px;
+}
+/* When the browser window is laid out in a portrait orientation (i.e. height greater than width) the toolbar transitions to a new layout defined by the CSS rules below */
+@media (orientation:portrait)
+{
+    #toolbar
+        {        
+        /* CSS rules set the toolbar height at 300px, width at 120px*/
+        height: 300px;
+        width: 120px;
+        
+        /*Need to reset min-width for portrait mode*/
+        min-width: 50px;
+        
+        
+        /* When in portrait layout, the buttons are laid out along the block axis, which is vertical for Western languages */
+        flex-direction: column;
+    }
+    #buttonGroup
+        {
+        display: flex;
+
+        /* This property changes the C and D buttons to, again, be laid out perpendicular to the toolbar layout */
+        flex-direction: row;
+        flex: 1;
+        max-height: 50px;
+    }
+    #buttonPlay
+        {
+        /* Here the A button is set to grow 3 times faster than other buttons in the toolbar. That is, 3 times the excess space is added to the A button as to other children of the toolbar. */
+        flex: 3;
+        max-height: 150px;
+    }
+    #buttonReverse
+        {
+        /* The ordinal group property for the B and E buttons mean that they will be laid out in the toolbar only after elements in lower groups (in this case the A and buttonGroup elements, which have a default ordinal group of 1) are laid out. Accordingly, ordinal group effectively controls the display order of flexbox children. */
+        order: 2;
+        max-height: 50px;
+    }
+    #buttonForward
+        {
+        order: 2;
+        max-height: 50px;
+    }
+    #buttonVolPlus
+        {
+        margin-bottom: 2px;
+        margin-right: 0px;
+        border-radius: 10px 0px 0px 10px;
+    }
+    #buttonVolMinus
+        {
+        margin-top: 2px;
+        margin-left: 0px;
+        border-radius: 0px 10px 10px 0px;
+    }
+}

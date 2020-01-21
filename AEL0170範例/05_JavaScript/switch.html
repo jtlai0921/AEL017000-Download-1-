@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>switch...case 判別式</title>
+
+    <script type="text/javascript">
+
+        var examNO = 60;
+
+        switch (examNO)  {
+            case 80:
+                document.write('成績：80分');
+                break;  //程式執行中斷，不會繼續執行下一列。
+            case 70:
+                document.write('成績：70分');
+                break;  //程式執行中斷，不會繼續執行下一列。
+            case 60:
+                document.write('成績：60分');
+                break;  //程式執行中斷，不會繼續執行下一列。
+
+            default:
+                // 以上皆非的情況，就執行這裡的程式。
+                document.write('您的成績不在80、70、60分裡面');
+                // default這邊沒有用到「break」。
+        } 
+
+        //***********************************************
+        //*** 用if判別式來判斷成果，輸入A、輸入B、輸入C各有不同的流程，寫起來會很累贅（但運作起來是正確的）。
+        //***********************************************
+        //if (examNO == 80) {   //第一個if
+        //    document.write('成績：80分');
+        //}
+        //else {
+
+        //    if (examNO == 70) {   //第二個if
+        //        document.write('成績：70分');
+        //    }
+        //    else {
+
+        //        if (examNO == 60) {
+        //            document.write('成績：60分');
+        //        }
+        //        else {
+        //            document.write('您的成績不在80、70、60分裡面');
+        //        }
+        //    }   //第二個if，判別是否為70分。
+        //}   //第一個if，判別是否為80分。
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

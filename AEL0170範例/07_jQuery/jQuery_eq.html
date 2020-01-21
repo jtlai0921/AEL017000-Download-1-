@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="Scripts/jquery-1.8.2.js" type="text/javascript"></script>
+</head>
+<body>
+
+    <p>您好！這是第1個段落</p>
+    <p>您好！這是第2個段落</p>
+    <p>您好！這是第3個段落</p>
+    <p>您好！這是第4個段落</p>
+    <p>您好！這是第5個段落</p>
+    <p>您好！這是第6個段落</p>
+    <p>您好！這是第7個段落</p>
+    <p>您好！這是第8個段落</p>
+    <p>您好！這是第9個段落</p>
+    <p>您好！這是第10個段落</p>
+    <p>您好！這是第11個段落</p>
+    <p>您好！這是第12個段落</p>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("p").eq(9).css("color", "red");
+            //電腦從零算起，所以 .eq(9)代表第十個<p>標籤。
+        });
+    </script>
+
+</body>
+</html>

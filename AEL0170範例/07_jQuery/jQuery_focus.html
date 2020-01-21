@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>資料來源：jQuery官方網站</title>
+
+    <script src="Scripts/jquery-1.8.2.js" type="text/javascript"></script>
+
+</head>
+<body>
+
+    <form>
+        <input id="TextBox1" type="text" value="第一個文字輸入方塊"> <br /><br />
+
+        <input type="text" value="第二個文字輸入方塊">
+    </form>
+
+    <br /><br />
+
+    <div id="other">
+        ***請點選我*** <br />
+        點選(click)以後，文字輸入指標會自動跳回第一個文字輸入方塊。
+    </div>
+    
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            // //只要第一個文字輸入方塊出現 focus()動作，就會觸發這段程式
+            //$("#TextBox1").focus(function () {
+            //    alert("文字輸入指標已經跳回(focus)第一個文字輸入方塊");
+            //});
+
+
+            $("#other").click(function () {
+                $("#TextBox1").focus();
+                //點選(click)以後，文字輸入指標會自動跳回第一個文字輸入方塊。
+            });
+
+            //資料來源：jQuery官方網站  http://api.jquery.com/focus/。
+        });
+    </script>
+
+</body>
+</html>

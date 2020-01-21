@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="Scripts/jquery-1.8.2.js" type="text/javascript"></script>
+</head>
+<body>
+
+    <ul>
+        <li>list item 一 (index=0)</li>
+        <li>list item 二 (index=1)</li>
+        <li>list item 三 (index=2)</li>
+        <li>list item 四 (index=3)</li>
+        <li>list item 五 (index=4)</li>
+        <li>list item 六 (index=5)</li>
+    </ul>
+    
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("li").slice(2, 4).css("background-color", "red");
+            // 電腦從零算起，
+            // 所以 (2)代表第三個"開始"，到(4)代表第五個"結束"。
+            //***重點！不包含最後一個！***
+        });
+    </script>
+
+    <!-- 資料來源，官方網站。http://api.jquery.com/slice/ -->
+
+</body>
+</html>
